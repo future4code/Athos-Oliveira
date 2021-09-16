@@ -19,7 +19,7 @@
 //b.---------------------------------------------------------------------------------------
 // function imprimeOlaNome(nome, idade, cidade, profissao){
 //      const  stringTx = (`Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}.`)
-//      console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}.`)
+//      console.log(stringTx)
 //   }
 //    imprimeOlaNome('Athos','34',"Teixeira","Estudante")
 //---------------------------------------------------------------------------------------
