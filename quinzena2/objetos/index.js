@@ -87,9 +87,10 @@
 // return lista
 // }
 // const estoque = (disponivel)=>{
-// disponivel.disponibilidade = false
-// let alteraEstoque = disponivel
-// return alteraEstoque
+// disponivel.disponibilidade = !disponivel.disponibilidade
+// return disponivel
+// }
+// estoque(fruta2)
 // }
 // estoque(fruta2)
 // sacola(fruta1,fruta2,fruta3)
