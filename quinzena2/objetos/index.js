@@ -61,6 +61,41 @@
 // sacola(fruta1,fruta2,fruta3)
 // console.log("Hoje tem Vinagrete", carrinho)
 
+//DESAFIO INFINITO 
+// //R: 1)
+// const dadosPessoa = {}
+// dadosPessoa.nome = prompt("insira um nome") 
+// dadosPessoa.idade = Number(prompt("insira uma idade")) 
+// dadosPessoa.profissao = prompt("insira uma profissao") 
+// console.log(typeof dadosPessoa, dadosPessoa )
+// //R: 2)
+// const listaFilme =(prop1 , prop2)=>{
+// console.log("O primeiro filme foi lançado antes do segundo?", prop1.ano > prop2.ano)
+// console.log("O primeiro filme foi lançado no mesmo ano do segundo?", prop1.ano < prop2.ano)
+// }
+// const filme1 = { filme: "Terminator 2", ano: 1991}
+// const filme2 = { filme: "SinCity 2", ano: 2014}
+// listaFilme(filme1,filme2)
+// // //R: 3)
+// const carrinho = []
+// const fruta1 = {nome : "tomate", disponibilidade: true }
+// const fruta2 = {nome : "cebola", disponibilidade: true }
+// const fruta3 = {nome : "pimentao", disponibilidade: true }
+ 
+// const sacola = (escolha1,escolha2,escolha3) => {
+// let lista = carrinho.push(escolha1,escolha2,escolha3) 
+// return lista
+// }
+// const estoque = (disponivel)=>{
+// disponivel.disponibilidade = false
+// let alteraEstoque = disponivel
+// return alteraEstoque
+// }
+// estoque(fruta2)
+// sacola(fruta1,fruta2,fruta3)
+// console.log("Hoje tem Vinagrete", carrinho)
+
+
 
 
 
