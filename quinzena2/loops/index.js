@@ -12,7 +12,7 @@
 // const quantidaeBichos = Number(prompt("quantidade"))
 // let listaPet=[]
 // if(quantidaeBichos > 0){
-    
+    //
 // for(let i = 0; i <= quantidaeBichos ; i++){
 //    listaPet[i] =  prompt("informe o  nome")    
 // }
