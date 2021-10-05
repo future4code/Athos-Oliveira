@@ -1,0 +1,14 @@
+﻿1 ter atenção no enunciado.
+	R: Ler o enunciado para compreender o que se pede.
+2 retirar informações relevantes.
+	R: Buscar os dos importante que seram tratados no programa.
+3 pensar nas entradas saidas
+	R: Imaginar quais qual fluxo de dados ira passar pelo programa e quais seram validos ou não.
+4 fazer um esquema visual
+	R: Fazer um fluxograma para visualizar melhor.
+5 Criar um codigo feio
+	R: Criar um codigo de esboço
+6 Testar força bruta
+	R: Fazer teste com as entradas e saidas imaginadas
+7 refatorar	
+	R: Refazer o codigo com menso linhas, visando a busca de performasse.
