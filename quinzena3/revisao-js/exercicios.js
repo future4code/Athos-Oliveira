@@ -1,13 +1,14 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
   
-    let arryInvertido = [];
-    for(i = array.length - 1; i >= 0; i--) {
+    const  arryInvertido = [];
+    for(let i = array.length - 1; i>=0;  i--) {
       arryInvertido.push(array[i])
     }
     return arryInvertido
+    
   }
-  
+  console.log(arryInvertido)
   
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
@@ -26,70 +27,128 @@ function retornaNumerosParesElevadosADois(array) {
 function retornaNumerosPares(array) {
 
 
-  let arryInvertido = []
+  let arryDePares = []
   for(let i = 0 ;i < array.length; i++) {
     if(array[i] % 2 ===0){
-    arryInvertido.push(array[i])
+      arryDePares.push(array[i])
   }}
-  return arryInvertido
+  return arryDePares
 
 }
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
 
+let oNumeroMaior = -1
+
+for(let i = 0; i < array.length; i++){
+  if(array[i]>oNumeroMaior){
+    oNumeroMaior=array[i]
+  }
+}
+return oNumeroMaior
 }
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  return array.length
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
 
+ const booleano1 = true
+ const booleano2 = false
+ const booleano3 = !booleano2 
+ const booleano4 = !booleano3 
+
+ const resultadoComE = booleano1 && booleano2 && !booleano4
+ const resultadoComEeOU= (booleano1 && booleano2) || !booleano3
+ const resultadoComOuEOu = (booleano2 || booleano3) && (booleano4 || booleano1)
+ const resultadoNegando = !(booleano2 && booleano3) || !(booleano1 && booleano3)
+ const resultadoNegandoEouEE =  !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
+
+  const respostas = [resultadoComE, resultadoComEeOU, resultadoComOuEOu, resultadoNegando, resultadoNegandoEouEE]
+  return respostas
 }
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+const guardaNumeroPar =[]
+let par = 0
+for(let i = 0 ; i  < n; i++){
 
+    guardaNumeroPar.push(par)
+    par += 2
+
+}
+return guardaNumeroPar
 }
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if(a !== b && a !== c && b !== c){
+   return 'Escaleno' 
+  }else if(a === b && a === c && b === c) {
+   return 'Equilátero'
+  } else if(a === b && b !== c && c !== a ) {
+  return 'Isósceles'
+  }
 }
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
   // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+let  NumeroMaior  = 0
+let  NumeroMenor = 0
+
+if(num1 > num2) {
+  NumeroMaior = num1
+  NumeroMenor = num2
+  
+} else {
+  NumeroMaior = num2
+  NumeroMenor = num1
+}
+
+const divisaoDoMaior = NumeroMaior % NumeroMenor === 0
+const diferencaNNumeros = NumeroMaior - NumeroMenor 
+ 
+return { maiorNumero: NumeroMaior,
+         maiorDivisivelPorMenor: divisaoDoMaior,
+         diferenca: diferencaNNumeros
+       }
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {
+function segundoMaiorEMenor(array){
 
+let verificaArray = array.length
+for(let i = 0; i < verificaArray ; i++){
+  for(let x = 0; x < verificaArray; x++ ){
+    if(array[x]>array[x+1]){
+       let reserva = array[x]
+       array[x] = array[x + 1]
+       array[x +1 ] = reserva
+     }
+   }
+ }
+return [array[array.length - 2], array[1]]
 }
+
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  //function ordenaArray(array) {
     // implemente sua lógica aqui
-    let tamanho = array.length;
-    for (let i = 0; i < tamanho; i++) {
-        for (let j = 0; j < tamanho; j++) {
-            if (array[j] > array[j + 1]) {
-                let aux = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = aux;
-            }
-        }
-    }
+    let verificaArray = array.length
+    for(let i = 0; i < verificaArray ; i++){
+      for(let x = 0; x < verificaArray; x++ ){
+        if(array[x]>array[x+1]){
+           let reserva = array[x]
+           array[x] = array[x + 1]
+           array[x +1 ] = reserva
+         }
+       }
+     }
     return array
  
 }
