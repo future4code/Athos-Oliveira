@@ -121,7 +121,6 @@ return { maiorNumero: NumeroMaior,
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array){
-
 let verificaArray = array.length
 for(let i = 0; i < verificaArray ; i++){
   for(let x = 0; x < verificaArray; x++ ){
