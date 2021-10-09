@@ -206,12 +206,27 @@ function anonimizaPessoa(pessoa) {
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
 
+const soMaioresDe18 = (array)=>{
+  return array.idade >=18
 }
+let somenteMaioresDeIdade = arrayDePessoas.filter(soMaioresDe18)
+return somenteMaioresDeIdade
+}
+
+
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
 
-}
+  const soMenoresDe18 = (array)=>{
+    return array.idade < 18
+  }
+  let somenteMenoresDeIdade = arrayDePessoas.filter(soMenoresDe18)
+  return somenteMenoresDeIdade
+  }
+
+
+
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
@@ -244,8 +259,6 @@ function verificaParidade(array) {
     } else {
       arrayNovo.push(`${array[i]} é ímpar`)
     }
-
-  //let resultadoMultix2 = array.map(multipicacaoX2)
 
   return arrayNovo.map(String)
 
