@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Adicionar Produto</title>
 </head>
-<body>
+
+
+<body class="back">
     <div>
-        <center><h1> Bem-vind@ a <em>Boadgames Express Store</em>!</p></h1>
+        <h1 class="titulo"> Bem-vind@ a <em>Boadgames Express Store !</em></p>
+        </h1>
     </div>
-    
-    <div> <center>
-        <a href="index.html">Página Inicial</a>
-        <a href="pagina-Vendas.html">Vender</a>
+
+    <div class="menu">
+        <a href="index.html">Página Inicial</a> |
+        <a href="pagina-Vendas.html">Vender</a> |
         <a href="ctrl-estoque.html">Controle de Estoque</a>
-    
+
 
     </div>
-<br><br>
-    <center>
-    <h2>Adicionar Produto</h2>
-    <form action="ctrl-estoque.html">
-        <div>
-            <label for="link-foto">Link para foto: </label><br>
-            <input type="url" id="link-foto" name="link-foto">
-        </div>
-        
-        <div>
-            <br><label for="descricao">Descrição do produto: </label><br>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
-        </div>
-        
-        <div>
-            <br><label for="preco">Preço (em R$): </label><br>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="numeric" id="preco" name="preço">
-        </div>
-        
-        <div>
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <br><label>Quantidade disponível: </label><br>
-            <input type="number" id="quantidadeDisponivel" nome="Quantidade disponível">
-        </div>
-<br>
-        <div class="form-add">
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <label>Clique em Adicionar ou Limpar os dados:</label><br>
-    <br>        <input type="submit" nome="Adicionar" value="Adicionar">
-            <label> &nbsp; </label>  
-            <button type="reset">Limpar</button>
+    <div class="centro">
+        <br>
+        <h2>Adicionar Produto</h2>
+        <br>
+        <form action="ctrl-estoque.html">
+            <div>
+                <label for="link-foto">Link para foto: </label><br>
+                <input type="url" id="link-foto" name="link-foto">
+            </div>
 
-          
+            <div>
+                <br><label for="descricao">Descrição do produto: </label><br>
+                <!-- Adicione o id apropriado para o input abaixo -->
+                <input type="text" id="descricao" name="descrição">
+            </div>
+
+            <div>
+                <br><label for="preco">Preço (em R$): </label><br>
+                <!-- Adicione o id apropriado e o type para receber números abaixo -->
+                <input type="numeric" id="preco" name="preço">
+            </div>
+
+            <div>
+                <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                <br><label>Quantidade disponível: </label><br>
+                <input type="number" id="quantidadeDisponivel" nome="Quantidade disponível">
+            </div>
+            <br>
+            <div class="form-add-produto">
+                <label>Clique em Adicionar cadastrar:</label>
+                <br><br>
+                <input type="submit" nome="Adicionar" value="Adicionar">
+                <label> &nbsp; </label>
+                <button type="reset">Limpar</button>
+
+
+            </div>
+
+        </form>
+        <br><br>
+    </div>
+    <br><br>
+    <footer class="rodape">
+        <div>
+            <p>Siga-nos nas redes sociais!</p>
+
+            <div class="icon">
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" width="50" height="50" />
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" width="50" height="50" />
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" width="50" height="50" />
+            </div>
         </div>
-
-    </form>
-
+    </footer>
 </body>
+
 </html>

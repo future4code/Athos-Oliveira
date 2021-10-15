@@ -1,23 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Pagina de Vendas</title>
 </head>
-<body>
-    <div> <center>
-        <h1> Bem-vind@ a <em>Boadgames Express Store</em>!</p></h1>
-    </div>
-    
-    <div> <center>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="historico-Vendas.html">Historico de Vendas</a>
-     
+
+
+<body class="back">
+    <div>
+        <h1 class="titulo"> Bem-vind@ a <em>Boadgames Express Store !</em></p>
+        </h1>
     </div>
 
-    <h2>Cadastrar Pedido de Venda</h2>
+    <div class="menu">
+        <a href="index.html">Página Inicial</a> |
+        <a href="ctrl-estoque.html">Controle de Estoque</a> |
+        <a href="historico-Vendas.html">Historico de Vendas</a>
+
+    </div>
+    <div class="centro">
+
+        <br>
+        <h2>Cadastrar Pedido de Venda</h2>
+        <br>
+
+        <form action="historico-Vendas.html">
+            <div>
+                <br><label for="Cliente">Cliente: </label><br>
+                <input type="text" id="Cliente" name="Cliente">
+            </div>
+            <div>
+                <br><label for="Vendedor">Vendedor: </label><br>
+                <input type="text" id="Vendedor" name="Vendedor">
+            </div>
+            <div>
+                <br><label for="Produto">Produto: </label><br>
+                <input type="text" id="Produto" name="Produto">
+            </div>
+
+            <div>
+                <br><label for="preco">Preço (em R$): </label><br>
+                <input type="numeric" id="preco" name="preço">
+            </div>
+
+            <div>
+                <br><label>Quantidade: </label><br>
+                <input type="number" id="quantidade" nome="Quantidade">
+            </div>
+            <br>
+            <div class="form-add-pedido">
+                <label>Clique em Adicionar para cadastrar:</label>
+                <br><br>
+                <input type="submit" nome="Adicionar" value="Adicionar">
+                <label> &nbsp; </label>
+                <button type="reset">Limpar</button>
+            </div>
+            <br><br>
+        </form>
+    </div>
+    <br><br>
+    <footer class="rodape">
+        <div>
+            <p>Siga-nos nas redes sociais!</p>
+
+            <div class="icon">
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" width="50" height="50" />
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" width="50" height="50" />
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" width="50" height="50" />
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
