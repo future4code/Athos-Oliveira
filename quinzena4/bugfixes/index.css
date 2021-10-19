@@ -113,7 +113,6 @@ div:last-child {
 table {
     width: 60%;
 }
-
 td button {
     background-color: #fadf63;
     width: 150px;
@@ -121,7 +120,15 @@ td button {
     border-radius: 5px;
     color: black;
 }
+input {
+    border-bottom: 3px solid;
+     border-right: 0px dashed #ddd;
+    border-left: 0px dashed #ddd;
+    border-top: 0px dashed #ddd;
+    outline: 1px ;
 
+
+}
 .container-do-search {
     margin-top: 20px;
     height: 100px;
