@@ -137,7 +137,12 @@ td button {
     font-size: 10px;
     color: black;
 }
-
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 #back-button:hover {
     background-color: #635a3d
 }
