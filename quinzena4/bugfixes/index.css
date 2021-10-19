@@ -50,6 +50,17 @@ div img {
     background-color: #c44f00;
 }
 
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-top: 150px;
+}
+
 .container {
     height: 500px;
     text-align: center;
