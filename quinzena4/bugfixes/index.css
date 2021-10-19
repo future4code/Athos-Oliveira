@@ -143,6 +143,13 @@ table {
     margin-right: auto;
     text-align: center;
 }
+td button:hover {
+    background-color: orange;
+    color: white;
+}
+#comprar:active {
+    color: rgb(230, 230, 233);
+}
 #back-button:hover {
     background-color: #635a3d
 }
