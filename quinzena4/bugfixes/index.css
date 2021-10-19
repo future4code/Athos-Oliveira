@@ -6,7 +6,17 @@
 
 * {
     margin: 0;
-    padding: 0;
+padding: 0;
+}
+
+li{
+    width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+   
+
+ 
+
 }
 
 h2 {
@@ -21,12 +31,16 @@ input {
     width: 500px;
 }
 
+
 button:focus {
     color: white;
 }
 
 img {
-    width: 100px;
+    background-color: white;
+    color: white;
+    width: 56.25px;
+    height: 56.25px;
 }
 
 div>p:first-child {
@@ -44,21 +58,11 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    margin-top: 150px;
 }
 
 .botao-amarelo:hover {
     background-color: #c44f00;
-}
-
-
-.botao-amarelo {
-    background-color: #ffaf43;
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 20px;
-    color: white;
-    margin-top: 150px;
 }
 
 .container {
@@ -67,7 +71,16 @@ div img {
 }
 
 .icone {
-    height: 15px;
+    
+    width: 25px;
+    height: 25px;
+    
+}
+.icone:hover{
+    opacity:0.5 ;
+}
+.icone:active{
+    opacity:1 ;
 }
 
 
@@ -77,12 +90,12 @@ div img {
   *
   **/
 
-  #container-de-descricao {
-    padding-top: 100px;
-     background-color: #2274a5;
-     color: white;
-     
- }
+#container-de-descricao {
+   padding-top: 100px;
+    background-color: #2274a5;
+    color: white;
+    
+}
 
 #container-de-descricao>ol {
     padding: 15px 0px;
@@ -104,22 +117,9 @@ div img {
   *  ESTILOS COMPRAR 
   *
   **/
+  /**
 
-div:nth-child(2),
-div:last-child {
-    text-align: center;
-}
-
-table {
-    width: 60%;
-}
-td button {
-    background-color: #fadf63;
-    width: 150px;
-    height: 30px;
-    border-radius: 5px;
-    color: black;
-}
+**/
 input {
     border-bottom: 3px solid;
      border-right: 0px dashed #ddd;
@@ -129,6 +129,36 @@ input {
 
 
 }
+
+
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+td button:hover {
+    background-color: orange;
+    color: white;
+}
+#comprar:active {
+    color: rgb(230, 230, 233);
+}
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
@@ -144,23 +174,23 @@ input {
     font-size: 10px;
     color: black;
 }
-table {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-td button:hover {
+
+#back-button:hover {
     background-color: orange;
     color: white;
 }
-#comprar:active {
-    color: rgb(230, 230, 233);
-}
-#back-button:hover {
-    background-color: #635a3d
+
+
+#voltar{
+    margin-top: 150px;
+    text-align: center;
 }
 
 body {
     font-family:roboto;
 }
+
+
+
+
+
