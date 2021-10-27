@@ -19,10 +19,10 @@ font-size: 20px;
     height:30px;
   }
 .container{
-    
+    /*  fica bem melhor com isso.
     height: 100vmax;
-    height: 80vmin;
-      
+    height: 100vmin;
+     */ 
 }
 .container-video{
     display: flex;
@@ -31,6 +31,7 @@ font-size: 20px;
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap:60px;
     column-gap: 16px;
     margin: 12px;
