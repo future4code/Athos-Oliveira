@@ -21,8 +21,11 @@ font-size: 20px;
     
     height: 100vmax;
     height: 80vmin;
-    
-   
+      
+}
+.container-video{
+    display: flex;
+    justify-content:center;
 }
 main{
     display: grid;
@@ -47,18 +50,16 @@ main{
 }
 
 .video1{
-    height: 70vh;
-   display: flex;
-   justify-content: center;
-   justify-items: center;
-    
+    height: 75vh;
+   
+
 }
 .texto-video1{
     
     font-size:30px ;
     font-family: Arial;
-    margin-left: 10vh ;
-    margin-right: 10vh ;  
+    margin: 5px;
+  
 }
 
 .footer{
