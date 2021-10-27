@@ -13,10 +13,13 @@ padding-right: 20px;
 font-size: 20px;
 }
 .buscar{
-    height: 40px;
-   
-    
+        
 }
+
+#txtBusca{
+    width: 200px;
+    height:30px;
+  }
 .container{
     
     height: 100vmax;
@@ -30,7 +33,7 @@ font-size: 20px;
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap:16px;
+    row-gap:60px;
     column-gap: 16px;
     margin: 12px;
     flex-grow: 1;
