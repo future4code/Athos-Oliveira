@@ -1,0 +1,281 @@
+/*nao usei o * margim padding 0*/
+.corpo{
+    background-image: url("img/teste.png");
+}
+/* CSS  pagina HOME*/
+.principal-home{
+    
+    width: 600px;
+    height: 800px;
+    background-color:#efefef;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+}
+.principal-home>img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    opacity: 0.8;
+}
+.principal-home>h1{
+   color: #c0c0c0;
+    height: 70px;
+    font-size: 50px;
+    font-variant: small-caps;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+}
+.principal-home>h3{
+    position: relative;
+    left: 70px;
+    display: inline-block;
+    padding-right: 10px;
+    color: #d0d0d0;
+    height: 50px;
+    font-size: 25px;
+    font-variant: small-caps;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+ }
+
+
+.menu{
+    color: #c0c0c0;
+height: 70px;
+padding-top: 30px;
+padding-bottom: 0px;
+font-size: 20px;
+font-variant: small-caps;
+font-family: Helvetica;
+text-align: center;
+font-weight: bold;
+}
+
+.menu> a:link {
+    color: #c2c2c2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #c2c2c2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #848484;
+    text-decoration: none;
+}
+
+a:active {
+    color: #4e4e4e;
+    text-decoration: none;
+}
+/**=======================================/
+/* CSS pagina SOBRE*/
+.principal-sobre{
+    
+    width: 800px;
+    height: 800px;
+    background-color:#efefef;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+}
+
+.principal-sobre>h1{
+    
+  
+     color: #c0c0c0;
+     height: 70px;
+     font-size: 50px;
+     font-variant: small-caps;
+     font-family: Helvetica;
+     text-align: center;
+     font-weight: bold;
+     margin: 0px;
+ }
+ .principal-sobre>p{
+     text-align: center;
+     color: #848484;
+     margin:18px;
+     font-size: 20px;    
+     font-family: Helvetica;  
+  }
+  #Skillist>ul{
+    margin-top: 50px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #848484;
+    font-size: 20px;
+    font-family: Helvetica;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+/**=======================================/
+
+
+/* CSS pagina CONTATO*/
+.principal-contato{
+    
+    width: 600px;
+    height: 700px;
+    background-color:#efefef;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+}
+
+.principal-contato>h2{
+    position: relative;
+   
+   top:10px; left: 30px;
+    display: inline-block;
+    
+    color: #d0d0d0;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+ }
+
+.principal-contato>h1{
+    margin-top: 30px;
+    color: #c0c0c0;
+     height: 60px;
+     font-size: 50px;
+     font-family: Helvetica;
+     text-align: center;
+     font-weight: bold;
+ }
+ #intro{
+    position: relative;
+   
+    top:10px; left: 0px;
+     
+     
+    color: #d0d0d0;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+ }
+
+  .icones{
+      
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 127px;
+    margin-right: 127px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icones> a:link {
+    color: #c2c2c2;
+    text-decoration: none;
+}
+
+.emails{
+    margin-top: 12px;
+    margin-left: 127px;
+    margin-right: 127px;
+    text-align: center;
+}
+
+/* CSS pagina PROJETOS*/
+
+.principal-projetos{
+    
+    width: 800px;
+    height: 800px;
+    background-color:#efefef;
+    margin-top: 10px;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+}
+
+.principal-projetos>h1{
+    
+     padding-top: 30px;
+     color: #c0c0c0;
+     height: 70px;
+     font-size: 50px;
+     font-variant: small-caps;
+     font-family: Helvetica;
+     text-align: center;
+     font-weight: bold;
+     margin: 0px;
+ }
+ .projeto1>img{
+    display: inline;
+    margin-top: 100px;
+    margin-left: 33px;
+    border-radius: 15px;
+ }
+ .projeto1>h3{
+    position: absolute;
+    right: 422px;
+    margin-top: 100px;
+    margin-left: 50px;
+    display: inline;
+    color: #848484;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+ .projeto1>p{
+    position: absolute;
+    right: 177px;
+    left: 604px;
+    bottom:160px;
+    display: inline;
+    text-align: justify;
+    color: #848484;
+    
+    margin-left: 220px;
+    margin-right: 220px;
+    font-size: 17px;
+    font-family: Helvetica;
+ }
+
+ .principal-projetos>.menu{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+ a:link {
+    color: #848484;
+    text-decoration: none;
+}
+ 
+.projeto1>a:hover {
+    color: #efefef;
+    text-decoration: none;
+}
+a:active {
+    color: #4e4e4e;
+    text-decoration: none;
+}

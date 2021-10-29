@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
 }
+
 /*
+
+
+/*
+
+
+
 .container{
     display: grid;
     grid-template-areas: 1fr 1fr 1fr 1fr;
@@ -29,6 +36,7 @@
 .main{
     display: grid;
     grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+
 } */
 
 
@@ -108,4 +116,12 @@ main{
 .principal{
     display: flex;
     height: 100vh;
+
 }
+
+}
+
+}
+
+
+
