@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+background-color: orange;
+height: 80px;
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding-left:20px;
+padding-right: 20px;
+font-size: 20px;
+}
+
+
+#Texto-Busca{
+    width: 200px;
+    height:30px;
+  }
+.container{
+    /*  fica bem melhor com isso.
+    height: 100vmax;
+    height: 100vmin;
+     */ 
+}
+.container-video{
+    display: flex;
+    justify-content:center;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap:60px;
+    column-gap: 16px;
+    margin: 12px;
+    flex-grow: 1;
+   
+    
+    
+}
+
+
+.card-video{
+   
+    height: 200px;
+    border-color: green;
+    align-items: center;
+    text-align: center;
+
+}
+
+.video1{
+    height: 75vh;
+   
+
+}
+.texto-video1{
+    
+    font-size:30px ;
+    font-family: Arial;
+    margin: 5px;
+  
+}
+
+.footer{
+    background-color: midnightblue;
+    height: 80px;
+    display:flex;
+    
+    align-items: center;
+    font-size: 30px;
+
+}
+footer>p{
+    color: white;
+}
+
