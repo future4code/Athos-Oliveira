@@ -18,12 +18,7 @@ font-size: 20px;
     width: 200px;
     height:30px;
   }
-.container{
-    /*  fica bem melhor com isso.
-    height: 100vmax;
-    height: 100vmin;
-     */ 
-}
+
 .container-video{
     display: flex;
     justify-content:center;
@@ -36,6 +31,7 @@ main{
     column-gap: 16px;
     margin: 12px;
     flex-grow: 1;
+    
    
     
     
@@ -44,16 +40,28 @@ main{
 
 .card-video{
    
-    height: 200px;
-    border-color: green;
+    
+   
     align-items: center;
     text-align: center;
+    border: solid 2px;
+    border-color: green;
+
+}
+.video{
+    
+
+   width: 100%;
+   height: auto;
 
 }
 
+
+
 .video1{
     height: 75vh;
-   
+    width: 100%;
+    
 
 }
 .texto-video1{
@@ -87,23 +95,22 @@ footer>p{
         row-gap:60px;
         column-gap: 16px;
         margin-bottom: 10%;
-        padding-bottom: 10%;
+        padding-bottom: 0%;
         flex-grow: 1;
-        background-color: blueviolet;
+      
 
     
     }
 
     header{
-        background-color: blue;
+    
         height: 10vh;
-        width: 100%;
+        width: 90vw;
         display: flex;
         justify-content:space-between;
         align-items: center;
-        padding-left:5%;
-        padding-right: 5%;
-        font-size: 100%;
+        
+        font-size: 95%;
         }
 
         #Texto-Busca{
@@ -113,15 +120,17 @@ footer>p{
           }
 
           .footer{
+            
+            
             background-color: midnightblue;
             height: 10vh;
-            display:flex;
-                 
+            width: 100vw;
+            position: absolute;     
             align-items: center;
-            font-size: 4vh;
-            
-            position: absolute;
-    top: 100%;
+            font-size: 150%;
+        }
+        #desse-footer{
+            margin-bottom: 100%;
         }
         footer>p{
             color: white;
@@ -134,7 +143,7 @@ footer>p{
        
         
         .video1{
-            height: 100%;
+            height: auto;
             width: 100%;
             margin-top: 5%;
         }
