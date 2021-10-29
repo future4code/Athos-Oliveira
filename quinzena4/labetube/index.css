@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+background-color: orange;
+height: 80px;
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding-left:20px;
+padding-right: 20px;
+font-size: 20px;
+}
+
+
+#Texto-Busca{
+    width: 200px;
+    height:30px;
+  }
+
+.container-video{
+    display: flex;
+    justify-content:center;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap:60px;
+    column-gap: 16px;
+    margin: 12px;
+    flex-grow: 1;
+    
+   
+    
+    
+}
+
+
+.card-video{
+   
+    
+   
+    align-items: center;
+    text-align: center;
+    border: solid 2px;
+    border-color: green;
+
+}
+.video{
+    
+
+   width: 100%;
+   height: auto;
+
+}
+
+
+
+.video1{
+    height: 75vh;
+    width: 100%;
+    
+
+}
+.texto-video1{
+    
+    font-size:30px ;
+    font-family: Arial;
+    margin: 5px;
+  
+}
+
+.footer{
+    background-color: midnightblue;
+    height: 80px;
+    display:flex;
+    
+    align-items: center;
+    font-size: 30px;
+
+}
+footer>p{
+    color: white;
+}
+
+    
