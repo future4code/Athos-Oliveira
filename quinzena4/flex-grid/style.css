@@ -6,6 +6,10 @@
 /*
 
 
+/*
+
+
+
 .container{
     display: grid;
     grid-template-areas: 1fr 1fr 1fr 1fr;
@@ -112,6 +116,9 @@ main{
 .principal{
     display: flex;
     height: 100vh;
+
+}
+
 }
 
 }
