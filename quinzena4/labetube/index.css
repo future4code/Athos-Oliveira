@@ -18,12 +18,7 @@ font-size: 20px;
     width: 200px;
     height:30px;
   }
-.container{
-    /*  fica bem melhor com isso.
-    height: 100vmax;
-    height: 100vmin;
-     */ 
-}
+
 .container-video{
     display: flex;
     justify-content:center;
@@ -36,6 +31,7 @@ main{
     column-gap: 16px;
     margin: 12px;
     flex-grow: 1;
+    
    
     
     
@@ -44,16 +40,28 @@ main{
 
 .card-video{
    
-    height: 200px;
-    border-color: green;
+    
+   
     align-items: center;
     text-align: center;
+    border: solid 2px;
+    border-color: green;
+
+}
+.video{
+    
+
+   width: 100%;
+   height: auto;
 
 }
 
+
+
 .video1{
     height: 75vh;
-   
+    width: 100%;
+    
 
 }
 .texto-video1{
@@ -77,3 +85,4 @@ footer>p{
     color: white;
 }
 
+    
