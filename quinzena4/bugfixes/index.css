@@ -1,0 +1,196 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+padding: 0;
+}
+
+li{
+    width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+   
+
+ 
+
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+}
+
+
+button:focus {
+    color: white;
+}
+
+img {
+    background-color: white;
+    color: white;
+    width: 56.25px;
+    height: 56.25px;
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+div img {
+    background: black;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-top: 150px;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+}
+
+.icone {
+    
+    width: 25px;
+    height: 25px;
+    
+}
+.icone:hover{
+    opacity:0.5 ;
+}
+.icone:active{
+    opacity:1 ;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+   padding-top: 100px;
+    background-color: #2274a5;
+    color: white;
+    
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+  /**
+
+**/
+input {
+    border-bottom: 3px solid;
+     border-right: 0px dashed #ddd;
+    border-left: 0px dashed #ddd;
+    border-top: 0px dashed #ddd;
+    outline: 1px ;
+
+
+}
+
+
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+td button:hover {
+    background-color: orange;
+    color: white;
+}
+#comprar:active {
+    color: rgb(230, 230, 233);
+}
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+}
+
+#back-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+#voltar{
+    margin-top: 150px;
+    text-align: center;
+}
+
+body {
+    font-family:roboto;
+}
+
+
+
+
+
