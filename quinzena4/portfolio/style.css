@@ -1,21 +1,14 @@
+/*nao usei o * margim padding 0*/
 .corpo{
     background-image: url("img/teste.png");
 }
-<<<<<<< HEAD
-/* - CSS  pagina HOME*/
-=======
 /* CSS  pagina HOME*/
->>>>>>> master
 .principal-home{
     
     width: 600px;
     height: 800px;
     background-color:#efefef;
-<<<<<<< HEAD
-    margin-top: 90px;
-=======
     margin-top: 30px;
->>>>>>> master
     margin-bottom: 90px;
     margin-left: auto;
     margin-right: auto;
@@ -25,11 +18,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-<<<<<<< HEAD
-    margin-top: 110px;
-=======
     margin-top: 10px;
->>>>>>> master
     margin-left: 150px;
     margin-right: 150px;
     opacity: 0.8;
@@ -61,11 +50,8 @@
 .menu{
     color: #c0c0c0;
 height: 70px;
-<<<<<<< HEAD
-=======
 padding-top: 30px;
 padding-bottom: 0px;
->>>>>>> master
 font-size: 20px;
 font-variant: small-caps;
 font-family: Helvetica;
@@ -92,10 +78,6 @@ a:active {
     color: #4e4e4e;
     text-decoration: none;
 }
-<<<<<<< HEAD
-
-/* CSS pagina SOBRE*/
-=======
 /**=======================================/
 /* CSS pagina SOBRE*/
 .principal-sobre{
@@ -145,18 +127,13 @@ a:active {
 /**=======================================/
 
 
->>>>>>> master
 /* CSS pagina CONTATO*/
 .principal-contato{
     
     width: 600px;
     height: 700px;
     background-color:#efefef;
-<<<<<<< HEAD
-    margin-top: 90px;
-=======
     margin-top: 30px;
->>>>>>> master
     margin-bottom: 90px;
     margin-left: auto;
     margin-right: auto;
@@ -166,11 +143,7 @@ a:active {
 .principal-contato>h2{
     position: relative;
    
-<<<<<<< HEAD
-   top:100px; left: 30px;
-=======
    top:10px; left: 30px;
->>>>>>> master
     display: inline-block;
     
     color: #d0d0d0;
@@ -182,11 +155,7 @@ a:active {
  }
 
 .principal-contato>h1{
-<<<<<<< HEAD
-    margin-top: 150px;
-=======
     margin-top: 30px;
->>>>>>> master
     color: #c0c0c0;
      height: 60px;
      font-size: 50px;
@@ -197,11 +166,7 @@ a:active {
  #intro{
     position: relative;
    
-<<<<<<< HEAD
-    top:150px; left: 0px;
-=======
     top:10px; left: 0px;
->>>>>>> master
      
      
     color: #d0d0d0;
@@ -215,11 +180,7 @@ a:active {
   .icones{
       
     display: inline-block;
-<<<<<<< HEAD
-    margin-top: 30px;
-=======
     margin-top: 10px;
->>>>>>> master
     margin-bottom: 50px;
     margin-left: 127px;
     margin-right: 127px;
@@ -231,9 +192,6 @@ a:active {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-/* CSS pagina PROJETOS*/
-=======
 .emails{
     margin-top: 12px;
     margin-left: 127px;
@@ -321,4 +279,3 @@ a:active {
     color: #4e4e4e;
     text-decoration: none;
 }
->>>>>>> master
