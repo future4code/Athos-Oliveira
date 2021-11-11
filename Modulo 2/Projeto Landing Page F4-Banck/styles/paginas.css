@@ -1,0 +1,669 @@
+/*fiz dois arquivos css por conta da grid da main, na hohe ela possue 3 linhas e nas demais paginas somente uma linha*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Segoe UI';
+}
+header {
+  background-color: #ff914d;
+  position:fixed ;
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+    justify-content: space-around;
+  align-items: center;
+}
+
+
+/*cor do botao no menu*/
+.navbar {
+overflow: hidden;
+background-color: #ff914d;
+
+}
+
+.navbar a {
+float: left;
+font-size: 150%;
+
+font-style:solid;
+color: white;
+text-align: center;
+padding: 14px 16px;
+
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 150%;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color:#ffbd59;
+
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ff914d;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ffbd59;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.app-bar{
+height: 12vh;
+padding-left:20px;
+padding-right: 20px;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr ;
+
+
+}
+/*esse campo foi adicionado para retirar a barra de rolagens horizontal 
+o sistema verifica se a necessidade dela aparecer.*/
+html {
+  overflow-y: scroll;
+  overflow-x:  scroll;
+  overflow-x: overlay;
+  overflow-y: overlay;
+  
+}
+/*=====================================================*/
+.img-quem-somos {
+  background-image: url('../img/img-quem-somos.jpg');
+   background-color: #ff914d; 
+   background-size:100%;
+   background-position: top center; 
+   width: 100vw;
+   height: 100vh;
+
+}
+
+
+.img-quem-somos>.texto-quem-somos {
+  position:static ;
+  margin-top: 2vh;
+margin-left: 2vw;
+  color: whitesmoke;
+  text-align: justify;
+  width: 45vw;
+  line-height: 4vh;
+  height: 20vh;
+  font-size: 170%;
+
+}
+
+.img-contato {
+  background-image: url('../img/img-contato.jpg');
+   background-color: #ff914d; 
+   background-size:100%;
+   background-position: top center; 
+   width: 100vw;
+   height: 100vh;
+
+}
+
+
+.img-contato>.texto-contato {
+  position:static ;
+  margin-top: 2vh;
+  margin-left: 55vw;
+    color: whitesmoke;
+    text-align: justify;
+    width: 30vw;
+    line-height: 5vh;
+    height: 20vh;
+    font-size: 100%;
+
+}
+.img-cartao {
+  background-image: url('../img/img-cartao.jpg');
+   background-color: #ff914d; 
+   background-size:100%;
+   background-position: top center; 
+   width: 100vw;
+   height: 100vh;
+
+}
+
+
+.img-cartao>.texto-cartao {
+  position:static ;
+  margin-top: 10vh;
+  margin-left: 52vw;
+  color: #ff914d; 
+  text-align: center;
+  width: 40vw;
+  line-height: 5vh;
+  height: 20vh;
+  font-size: 200%;
+
+}
+.img-banco-conta {
+  background-image: url('../img/img-banco-conta.jpg');
+   background-color: #ff914d; 
+   background-size:107%;
+   background-position:  center; 
+   width: 100vw;
+   height: 100vh;
+
+}
+
+
+.img-banco-conta>.texto-banco-conta {
+  position:static ;
+  margin-top: 3vh;
+  margin-left: 16vw;
+    color: white;
+    text-align:left;
+    width: 40vw;
+    line-height: 7vh;
+    height: 20vh;
+    font-size: 200%;
+
+}
+.img-investimento {
+  background-image: url('../img/img-investimento.jpg');
+   background-color: #ff914d; 
+   background-size:255vh;
+   background-position:  center; 
+   width: 100vw;
+   height: 100vh;
+
+}
+
+
+.img-investimento>.texto-investimento {
+  position:static ;
+  margin-top: 10%;
+  margin-left: 50%;
+  color: whitesmoke;
+  text-align: center;
+  width: 650px;
+  line-height: 130%;
+  height: 30%;
+  font-size: 200%;
+
+}
+
+/*=====================================================*/
+/*seção de configuração do footer*/
+.footer {
+  background-color: #2f333d;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  font-size:large;  
+  justify-content: space-evenly;
+}
+.menu-footer,.serviços{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 1%;
+}
+/*retirar pontos da lista nao ordenada*/
+li{
+list-style-type: none;
+}
+ul>h3{
+color:#ff914d;
+}
+.icones>p {
+font-size: 120%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin: 10%;   
+}
+.icones>a{
+margin-bottom: 1vh;
+margin-left: 1vh;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+ 
+/* configuracao de responsovodade para telas com 1280x1024 e 1280x720 */
+
+@media screen and (max-device-width:1280px) {
+  /* telas em 1280px */
+  body{
+    font-family: 'Segoe UI';
+  }
+  header {
+    background-color: #ff914d;
+    position:fixed ;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+      justify-content: space-around;
+    align-items: center;
+  }
+  .footer {
+    background-color: #2f333d;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    font-size:large;  
+    justify-content: space-evenly;
+  }
+  main{
+    background-color:#ff914d;
+  }
+  /* configuracao de redimencionamento das imagens do background */
+  .img-quem-somos {
+    background-image: url('../img/img-quem-somos.jpg');
+     background-color: #ff914d; 
+     background-size:180vh;
+     background-position: top center; 
+     width: 100vw;
+     height: 100vh;
+  
+  }
+  .img-cartao {
+    background-image: url('../img/img-cartao.jpg');
+     background-color: #ff914d; 
+     background-size:180vh;
+     background-position: top center; 
+     width: 100vw;
+     height: 100vh;
+  
+  }
+  .img-contato {
+    background-image: url('../img/img-contato.jpg');
+     background-color: #2f333d; 
+     background-size:156vh;
+     background-position:  center; 
+     width: 100vw;
+     height: 100vh;
+  
+  }
+  .img-contato>.texto-contato {
+    position:static ;
+    margin-top: 3vh;
+    margin-left: 55vw;
+      color: whitesmoke;
+      text-align: justify;
+      width: 35vw;
+      line-height: 5vh;
+      height: 20vh;
+      font-size: 140%;
+  
+  }
+  .img-investimento {
+    background-image: url('../img/img-investimento.jpg');
+     background-color: #ff914d; 
+     background-size:200vh;
+     background-position:  center; 
+     width: 100vw;
+     height: 100vh;
+  
+  }
+  .img-banco-conta {
+    background-image: url('../img/img-banco-conta.jpg');
+     background-color: #ff914d; 
+     background-size:190vh;
+     background-position:  center; 
+     width: 100vw;
+     height: 100vh;
+  
+  }
+  
+.img-banco-conta>.texto-banco-conta {
+  position:static ;
+  margin-top: 7vh;
+  margin-left: 3vw;
+    color: white;
+    text-align:left;
+    width: 50vw;
+    line-height: 5vh;
+    height: 20vh;
+    font-size: 200%;
+
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+
+
+
+}
+/* configuracao de responsovodade para telas iphone 6 , 7 e 8 */
+@media screen and (max-device-width : 677px) and (max-device-width:375px) {
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: 'Segoe UI';
+  }
+  header {
+    background-color: #ff914d;
+    position:fixed ;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+   font-size: 90%; 
+    align-items: center;
+  }
+
+  /*tive que desaparecer com a logo, pois nao cabia junto com o menu, vi que o menu para movile sua java script*/
+  header>img{
+    width: 20%;
+    height: 40%;
+  display: none;
+   
+  }
+  .navbar>a{
+    padding: none;
+  }
+  
+  /*cor do botao no menu*/
+  .navbar {
+  overflow: hidden;
+  background-color: #ff914d;
+  
+  }
+  /*  configuraçoes do menu suspenso e colorido */
+  .navbar a {
+  float: left;
+  font-size: 90%;
+  
+  font-style:solid;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  
+  }
+  
+  .dropdown {
+  float: left;
+  overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 90%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#ffbd59;
+  
+  }
+  
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff914d;
+  min-width: 90%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+  
+  .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: #ffbd59;
+  }
+  
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  .app-bar{
+  height: 12vh;
+  
+  }
+  
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ;
+  
+  
+  }
+  /*esse campo foi adicionado para retirar a barra de rolagens horizontal 
+  o sistema verifica se a necessidade dela aparecer.*/
+  html {
+    overflow-y: scroll;
+    overflow-x:  scroll;
+    overflow-x: overlay;
+    overflow-y: overlay;
+    
+  }
+  /*=====================================================*/
+  .img-quem-somos {
+    background-image: url('../img/img-quem-somos.jpg');
+    background-size:200vw;
+    background-repeat: no-repeat;
+  background-color: #ffbc3c;
+  background-position-y: 220%;
+  background-position-x: 80%;
+  }
+  
+  
+  .img-quem-somos>.texto-quem-somos {
+    position:static ;
+    margin-top: 2vh;
+  margin-left: 4vw;
+    color: whitesmoke;
+    text-align: left;
+    width: 90vw;
+    line-height: 3vh;
+    height: 2vh;
+    font-size: 100%;
+  
+  }
+  
+  .img-contato {
+    background-image: url('../img/img-contato.jpg');
+    background-size:200vw;
+    background-repeat: no-repeat;
+  background-color: #504c5c;
+  
+  background-position-y: 220%;
+  background-position-x: 10%;
+  }
+  
+  
+  .img-contato>.texto-contato {
+    position:static ;
+    margin-top: 2vh;
+    margin-left: 3vw;
+      color: whitesmoke;
+      text-align: center;
+      width: 90vw;
+      line-height: 3vh;
+      height: 20vh;
+      font-size: 100%;
+  
+  }
+  .img-cartao {
+    background-image: url('../img/img-cartao.jpg');
+    background-size:200vw;
+    background-repeat: no-repeat;
+  background-color: white;
+  background-position-y:13vh;
+ 
+  }
+  
+  
+  .img-cartao>.texto-cartao {
+    position:static ;
+    margin-top: 5vh;
+    margin-left: 50vw;
+    color: #ff914d; 
+    text-align: center;
+    width: 45vw;
+    line-height: 3vh;
+    height: 2vh;
+    font-size: 120%;
+  
+  }
+  .img-banco-conta {
+    background-image: url('../img/img-banco-conta.jpg');
+    background-size:200vw;
+    background-repeat: no-repeat;
+  background-color: #ff5c0c;
+  background-position-y:90%;
+  }
+  
+  
+  .img-banco-conta>.texto-banco-conta {
+    position:static ;
+    margin-top: 2vh;
+    margin-left: 14vw;
+      color: white;
+      text-align:left;
+      width: 60vw;
+      line-height: 4vh;
+      height: 4vh;
+      font-size: 120%;
+  
+  }
+  .img-investimento {
+    background-image: url('../img/img-investimento.jpg');
+     background-color: #f7f7f7; 
+     
+     background-size:200vw;
+     background-repeat: no-repeat;
+     background-position-y:5vh;
+     
+     
+    
+  
+  }
+  
+  
+
+  
+  /*=====================================================*/
+  /*seção de configuração do footer*/
+.footer {
+  background-color: #2f333d;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  font-size:100%;  
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20vh;
+}
+
+
+/*usei displey para alinhas os  listas */
+.menu-footer,.serviços{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+/*retirar pontos da lista nao ordenada*/
+li{
+list-style-type: none;
+}
+/*cor no titulo do menu*/
+ul>h3{
+color:#ff914d;
+}
+
+.icones>p {
+font-size: 120%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin: 10%;   
+}
+.icones>a{
+
+  margin-left: 12vw;
+      margin-right: -1vw;
+}
+
+/*configuracao das cores dos hiperlinks para acessar outras paginas*/
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+
+}
+
+
