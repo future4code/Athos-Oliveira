@@ -1,0 +1,655 @@
+/*fiz dois arquivos css por conta da grid da main, na hohe ela possue 3 linhas e nas demais paginas somente uma linha*/
+/* returar as parguen to site  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*  defini uma tipo de fonte para todo site */
+body{
+  font-family: 'Segoe UI';
+}
+
+/*  defino o menu sustenso para ele ficar visivel quando rolar a pagina */
+header {
+  background-color: #ff914d;
+  position:fixed ;
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+    justify-content: space-around;
+  align-items: center;
+}
+
+
+/*cor do botao no menu*/
+.navbar {
+overflow: hidden;
+background-color: #ff914d;
+
+}
+/*  configuraçoes do menu suspenso e colorido */
+.navbar a {
+float: left;
+font-size: 150%;
+
+font-style:solid;
+color: white;
+text-align: center;
+padding: 14px 16px;
+
+}
+/* menu dropdwn  */
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 150%;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color:#ffbd59;
+
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ff914d;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ffbd59;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* para o texto nao ficar por baixo do menu */
+.app-bar{
+height: 12vh;
+
+}
+
+
+
+
+
+/*====================================================================================*/
+/* configuracao da main */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+
+
+}
+/*esse campo foi adicionado para retirar a barra de rolagens horizontal 
+o sistema verifica se a necessidade dela aparecer.*/
+html {
+    overflow-y: scroll;
+    overflow-x:  scroll;
+    overflow-x: overlay;
+    overflow-y: overlay;
+    
+}
+/*=====================================================*/
+
+/* configuraçoes da imagem 1 e do texto ao lado da imagem 1 da home ,  joguei a imagem como backgrund para colocar um texto por cima
+tentei usar position absolute, mas quando rolava a pagina ele ficava em cima do menu, que tbm e position fixed */
+.imagem01 {
+    background-image: url('../img/imagem01.jpg');
+     background-color: #ff914d; 
+     background-size:100%;
+     background-position: top center; 
+     width: 100vw;
+     height: 100vh;
+  
+}
+
+/* configuracao do texto 1 */
+.imagem01>.texto1 {
+    position:static ;
+    margin-top: 8vh;
+    margin-left: 50vw;
+    color: whitesmoke;
+    text-align: center;
+    width: 45vw;
+    line-height: 6vh;
+    height: 20vh;
+    font-size: 200%;
+   
+}
+
+/* configuraçoes da imagem 2 e do texto ao lado da imagem 2 da home  */
+/*=====================================================*/
+.imagem02 {
+  background-image: url('../img/imagem02.jpg');
+  background-color: #ff914d; 
+  background-size:100%;
+  background-position: top center; 
+  width: 100vw;
+  height: 100vh;
+}
+/* configuracao do texto 2 */
+
+.imagem02>.texto2 {
+position:static ;
+margin-top: 2vh;
+margin-left: 2vw;
+color: whitesmoke;
+text-align: center;
+width: 45vw;
+line-height: 7vh;
+height: 20vh;
+font-size: 180%;
+
+}
+
+/* configuraçoes da imagem 3 e do texto ao lado da imagem 3 da home  */
+
+.imagem03 {
+    background-image: url('../img/imagem03.jpg');
+    background-color: #ff914d; 
+    background-size:110%;
+    background-position: center; 
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.imagem03>.texto3 {
+    position:static ;
+    margin-top: 10vh;
+    margin-left: 50vw;
+    color: whitesmoke;
+    text-align: center;
+    width: 40vw;
+    line-height: 7vh;
+    height: 6vh;
+    font-size: 180%;
+ 
+}
+
+
+/* configuraçoes da imagem 4 e do texto ao lado da imagem 4 da home  */
+.imagem04 {
+    background-image: url('../img/imagem04.jpg');
+    background-color: #ff914d; 
+    background-size:100%;
+    background-position: top center; 
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.imagem04>.texto4 {
+  position:static ;
+  margin-top: 20vh;
+  margin-left: 5vw;
+  color: whitesmoke;
+  text-align: center;
+  width: 40vw;
+  line-height: 10vh;
+  height: 10vh;
+  font-size: 200%;
+  
+}
+
+/*=====================================================*/
+/*seção de configuração do footer*/
+/*usei displey para alinhas os icones space evenly deu um espaço entre os icones */
+.footer {
+  background-color: #2f333d;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  font-size:large;  
+  justify-content: space-evenly;
+}
+
+
+/*usei displey para alinhas os  listas */
+.menu-footer,.serviços{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 1%;
+}
+/*retirar pontos da lista nao ordenada*/
+li{
+list-style-type: none;
+}
+/*cor no titulo do menu*/
+ul>h3{
+color:#ff914d;
+}
+/* configuracao somente dos icones do footer */
+.icones>p {
+font-size: 120%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin: 10%;   
+}
+/* configuracao afastar icones   do footer */
+.icones>a{
+margin-bottom: 1vh;
+margin-left: 1vh;
+}
+/*configuracao das cores dos hiperlinks para acessar outras paginas*/
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+
+
+
+ 
+/* configuracao de responsovodade para telas com 1280x1024 e 1280x720 */
+@media screen and (max-device-width:1280px) {
+  /* telas em 1280px */
+  body{
+    font-family: 'Segoe UI';
+  }
+  header {
+    background-color: #ff914d;
+    position:fixed ;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+      justify-content: space-around;
+    align-items: center;
+  }
+  .footer {
+    background-color: #2f333d;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    font-size:large;  
+    justify-content: space-evenly;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+ 
+/* configuracao de redimencionamento das imagens do background */
+
+.imagem01 {
+  background-image: url('../img/imagem01.jpg');
+   background-color: #ff914d; 
+   background-size:180vh;
+   background-position:  center; 
+   width: 100vw;
+   height: 100vh;
+}
+.imagem02 {
+  background-image: url('../img/imagem02.jpg');
+  background-color: #ff914d; 
+  background-size:180vh;
+  background-position:  center; 
+  width: 100vw;
+  height: 100vh;
+}
+.imagem03 {
+  background-image: url('../img/imagem03.jpg');
+  background-color: #ff914d; 
+  background-size:190vh;
+  background-position:  center; 
+  width: 100vw;
+  height: 100vh;
+}
+.imagem04 {
+  background-image: url('../img/imagem04.jpg');
+  background-color: #ff914d; 
+  background-size:180vh;
+  background-position:  center; 
+  width: 100vw;
+  height: 100vh;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+}
+
+
+ 
+/* configuracao de responsovodade para telas iphone 6 , 7 e 8 */
+
+@media screen and (max-device-width : 677px) and (max-device-width:375px) {
+  /* celulares */
+/*fiz dois arquivos css por conta da grid da main, na hohe ela possue 3 linhas e nas demais paginas somente uma linha*/
+/* returar as parguen to site  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*  defini uma tipo de fonte para todo site */
+body{
+  font-family: 'Segoe UI';
+}
+
+/*  defino o menu sustenso para ele ficar visivel quando rolar a pagina */
+header {
+  background-color: #ff914d;
+  position:fixed ;
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+ font-size: 90%; 
+  align-items: center;
+}
+  /*tive que desaparecer com a logo, pois nao cabia junto com o menu, vi que o menu para movile sua java script*/
+header>img{ 
+display:none;
+ 
+}
+.navbar>a{
+  padding: none;
+}
+
+/*cor do botao no menu*/
+.navbar {
+overflow: hidden;
+background-color: #ff914d;
+
+}
+/*  configuraçoes do menu suspenso e colorido */
+.navbar a {
+float: left;
+font-size: 90%;
+
+font-style:solid;
+color: white;
+text-align: center;
+padding: 14px 16px;
+
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 90%;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color:#ffbd59;
+
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ff914d;
+min-width: 90%;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ffbd59;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.app-bar{
+height: 12vh;
+
+}
+
+
+html {
+  overflow-y: scroll;
+  overflow-x:  scroll;
+  overflow-x: overlay;
+  overflow-y: overlay;
+  
+}
+
+
+/*====================================================================================*/
+/* configuracao da main */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+
+}
+/*esse campo foi adicionado para retirar a barra de rolagens horizontal 
+o sistema verifica se a necessidade dela aparecer.*/
+
+/*=====================================================*/
+
+/* configuraçoes da imagem 1 e do texto ao lado da imagem 1 da home ,  joguei a imagem como backgrund para colocar um texto por cima
+tentei usar position absolute, mas quando rolava a pagina ele ficava em cima do menu, que tbm e position fixed */
+.imagem01 {
+    background-image: url('../img/imagem01.jpg');
+     background-color: #f8c484; 
+     background-size:100vh;
+     background-repeat: no-repeat;
+     background-position-y: 150%;
+     background-position-x: 20%;
+
+  
+}
+
+
+.imagem01>.texto1 {
+    position:static ;
+    margin-top: 2vh;
+    margin-right: auto;
+    margin-left: auto;
+    color: whitesmoke;
+    text-align: center;
+    width: 70vw;
+    line-height: 4vh;
+    height: 30vh;
+    font-size: 100%;
+   
+}
+
+/* configuraçoes da imagem 2 e do texto ao lado da imagem 2 da home  */
+/*=====================================================*/
+.imagem02 {
+  background-image: url('../img/imagem02.jpg');
+  background-color: #88c4c4;
+  background-size:100vh;
+  background-repeat: no-repeat;
+  background-position-y: 140%;
+  background-position-x: 100%;
+}
+
+
+.imagem02>.texto2 {
+position:static ;
+margin-top: 3vh;
+margin-left: auto;
+margin-right: auto;
+color: whitesmoke;
+text-align: center;
+width: 80vw;
+line-height: 3vh;
+height: 20vh;
+font-size: 90%;
+
+}
+
+/* configuraçoes da imagem 3 e do texto ao lado da imagem 3 da home  */
+
+.imagem03 {
+    background-image: url('../img/imagem03.jpg');
+    background-color: #d88c24; 
+    background-size:100vh;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 3%;
+}
+
+
+.imagem03>.texto3 {
+    position:static ;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    text-align: center;
+    width: 60vw;
+    line-height: 4vh;
+    height: 6vh;
+    font-size: 80%;
+ 
+}
+
+
+/* configuraçoes da imagem 4 e do texto ao lado da imagem 4 da home  */
+.imagem04 {
+    background-image: url('../img/imagem04.jpg');
+    background-color: #ffb43c; 
+    background-size:100vh;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 100%;
+}
+
+
+.imagem04>.texto4 {
+  position:static ;
+  margin-top: 12vh;
+  margin-right: auto;
+  margin-left: auto;
+  color: whitesmoke;
+  text-align: center;
+  width: 60vw;
+  line-height: 5vh;
+  height: 10vh;
+  font-size: 100%;
+  
+}
+
+/*=====================================================*/
+/*seção de configuração do footer*/
+/*usei displey para alinhas os icones space evenly deu um espaço entre os icones */
+.footer {
+  background-color: #2f333d;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  font-size:100%;  
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20vh;
+}
+
+
+/*usei displey para alinhas os  listas */
+.menu-footer,.serviços{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+/*retirar pontos da lista nao ordenada*/
+li{
+list-style-type: none;
+}
+/*cor no titulo do menu*/
+ul>h3{
+color:#ff914d;
+}
+
+.icones>p {
+font-size: 120%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin: 10%;   
+}
+.icones>a{
+
+  margin-left: 12vw;
+      margin-right: -1vw;
+}
+
+/*configuracao das cores dos hiperlinks para acessar outras paginas*/
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+color: white;
+  text-decoration: none;
+}
+a:active {
+  color: #ff914d;
+  text-decoration: none;
+}
+
+}
+
+
