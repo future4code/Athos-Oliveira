@@ -78,7 +78,7 @@ frameborder="0" allowfullscreen />
 <video controls width="320" height="240"  src="https://storage.googleapis.com/future-apis.appspot.com/10.mp4" type="video" alt="video1"/>
 <h4>Ireland´s Beauty</h4>
 </div>
-<div></div>
+
 </section>
   </main>
   <footer className="footer">
