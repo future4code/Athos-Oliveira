@@ -1,0 +1,25 @@
+.small-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 80px;
+    
+}
+
+.small-card > img {
+    width: 70px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+.texto-card{
+display: flex;
+}
+.texto-card>p{
+    margin-left: 8px;
+}
+
+
+
