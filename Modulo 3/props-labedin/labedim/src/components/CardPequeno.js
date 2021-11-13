@@ -19,10 +19,15 @@ const ImgCardPequeno = styled.img`
 `;
 const TextoCardPequeno = styled.div`
 display:flex;
+justify-content:center;
+ align-items:center;
 margin-left: 8px;
 `
 const Endereco = styled.p`
+display:flex;
  margin-left: 8px;
+ justify-content:center;
+ align-items:center;
 `
 
 function CardPequeno(props) {

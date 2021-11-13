@@ -11,9 +11,10 @@ const CardGrandeContainer = styled.div`
     height: 200px;
 `
 const ImagemCardGrand = styled.img`
-  width: 70px;
-    margin-right: 10px;
-    border-radius: 50%;
+  width:20%;
+  height:50%;
+    margin-right: 20px;
+    border-radius: 80%;
 `
 const CardGrandeConteiner2 = styled.div`
 display: flex;
