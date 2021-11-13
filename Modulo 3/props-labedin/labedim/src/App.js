@@ -1,9 +1,12 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './App.css';
-import CardGrande from './components/CardGrande/CardGrande';
-import CardPequeno from './components/CardPequeno/CardPequeno';
-import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardGrande from './components/CardGrande';
+import CardPequeno from './components/CardPequeno';
+import ImagemButton from './components/ImagemButton';
 import fotoMinha from './img/e.jpg';
+
+
+ 
 
 
 function App() {
@@ -23,11 +26,15 @@ function App() {
         />
       </div>
       <div className="page-section-container">
-        <CardPequeno
-          icone="https://thumbs.dreamstime.com/z/email-icon-isolated-13761939.jpg"
-         texto2="Email:"
-         endereco="ath@gmail.com"
+          <CardPequeno
+         icone="https://thumbs.dreamstime.com/z/email-icon-isolated-13761939.jpg"
+          texto2="Email:"
+          endereco="ath@gmail.com"
         />
+      
+       
+        
+        
         <CardPequeno
           icone="https://thumbs.dreamstime.com/z/location-map-navigation-icon-gps-pointer-mark-location-map-navigation-icon-gps-pointer-mark-business-travel-map-marker-red-colored-124924319.jpg"
           texto2="Endereço:"
