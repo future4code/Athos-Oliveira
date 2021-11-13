@@ -9,6 +9,11 @@ const MeuBotao = styled.button`
     font-size: 1.2rem;
     margin: 1rem;
     padding: 1rem 1.5rem;
+    :hover {
+    color:green;
+    background-color:red;
+  }
+ 
 `;
 
 export default MeuBotao;

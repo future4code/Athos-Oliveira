@@ -93,7 +93,7 @@ class App extends Component {
           texto="Instagram"
         />
       </PageSection>
-      <MeuBotao>Enviar</MeuBotao>
+      <MeuBotao><p>Enviar</p></MeuBotao>
       </Estrutura>
       </MeuBody>
   );
