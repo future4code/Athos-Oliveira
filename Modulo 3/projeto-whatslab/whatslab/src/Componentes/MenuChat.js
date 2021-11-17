@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
+import { useState } from "react";
+import ReactDOM from 'react-dom';
 
 const ContainerMenuChat = styled.div`
    
@@ -48,17 +50,28 @@ const InputMensagem = styled.input`
     padding: 2%;
     
 `
-function enviaMensagem() {
-    alert("Mensagem Enviada")
+
+//const [name, setName] = useState("");
+
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("The name you entered was: ${}");
   }
 
 function ContainerMenu(props) {
     return (
+        <div>
         <ContainerMenuChat>
-            <InputUsuario type="text" placeholder="Usuario" />
-            <InputMensagem type="text" placeholder="Mensagem" />
-            <BotaoEnviar onClick={enviaMensagem}>Enviar</BotaoEnviar>
-        </ContainerMenuChat>
+        <form onSubmit={handleSubmit}>
+         <InputUsuario type="text"  placeholder="Usuario" />
+         <InputMensagem  type="text"  placeholder="Mensagem" />
+         
+         <BotaoEnviar type="submit">Enviar</BotaoEnviar>
+         </form>
+         </ContainerMenuChat>
+        
+       </div>
     )
 }
 

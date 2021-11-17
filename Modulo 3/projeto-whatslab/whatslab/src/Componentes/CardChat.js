@@ -19,13 +19,15 @@ background-color:#efefef;
 
 function ChatContainer(props) {
     return (
+        <div>
         <Container>
         <ContainerChat>
+            
           
-      
         </ContainerChat>
         <MenuChat />
         </Container>
+    </div>
     )
 }
 
