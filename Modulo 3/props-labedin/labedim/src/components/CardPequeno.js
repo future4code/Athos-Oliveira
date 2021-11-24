@@ -1,28 +1,19 @@
 import React from 'react';
-// import CardGrande from './components/CardGrande/CardGrande';
-import styled from 'styled-components';
+import './CardPequeno.css'
 
-const DivFlexEBorda = styled.div `
-    display: flex;
-    align-items: center;
-    padding: 10px 10px;
-    border: 1px solid black;
-    margin-bottom: 10px;
-`
-
-const Icone= styled.img `
-    width: 30px;
-    margin-right:10px;
-`
 function CardPequeno(props) {
     return (
-        <DivFlexEBorda>
-            <Icone src={ props.icone } />
-            <div>
-                <p>{ props.endereco }</p>
+        <div className="small-card">
+            <img src={props.icone} />
+            <div className="texto-card">
+                <h4>{props.texto2}</h4> <p>{props.endereco}</p>
             </div>
-        </DivFlexEBorda>
-    )
-}
 
+
+        </div>
+
+    )
+
+
+}
 export default CardPequeno;

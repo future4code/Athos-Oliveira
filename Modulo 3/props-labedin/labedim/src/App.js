@@ -1,69 +1,67 @@
 import React from 'react';
 import './App.css';
-import CardGrande from './components/CardGrande';
-import fotoPessoal from './img/foto-pessoal.jpg'
-import ImagemButton from './components/ImagemButton';
-import bancoDoBrasil from './img/bancoDoBrasil.jpg';
-import CardPequeno from './components/CardPequeno';
-import imagemEmail from './img/email.png'
-import enderecoResidencial from './img/endereco-residencial.png'
+import CardGrande from './components/CardGrande/CardGrande';
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import ImagemButton from './components/ImagemButton/ImagemButton';
+import fotoMinha from './img/e.jpg';
+
 
 function App() {
   return (
     <div className="App">
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
-        <CardGrande 
-          imagem={fotoPessoal} 
-          nome="Izabella Christina Brandão Silva" 
-          descricao="Oi, eu sou a Izabella. Atualmente sou estudante de desenvolvedor web full stack na labenu, sou formada em Engenharia Civil e Sistemas de Informação."
+        <CardGrande
+          imagem={fotoMinha}
+          nome="Athos de Oliveira"
+          descricao="Oi, me chamo Athos , sou aluno na Labenu quero atuar como fullstack ao termino do curso, trabalho em uma fabrica de software."
         />
-        
-        <ImagemButton 
-          imagem="https://image.flaticon.com/icons/png/512/117/117472.png" 
+
+        <ImagemButton
+          imagem="https://image.flaticon.com/icons/png/512/117/117472.png"
           texto="Ver mais"
         />
       </div>
-
       <div className="page-section-container">
-        <h2>Endereço de E-mail e Residencial</h2>
-        <CardPequeno 
-          icone={imagemEmail} 
-          endereco="bellacbrandao@gmail.com" 
-        />        
-
         <CardPequeno
-          icone={enderecoResidencial} 
-          endereco="Rua Antonio Froes, 113, Centro. Bocaiuva-MG" 
-        />        
+          icone="https://thumbs.dreamstime.com/z/email-icon-isolated-13761939.jpg"
+         texto2="Email:"
+         endereco="ath@gmail.com"
+        />
+        <CardPequeno
+          icone="https://thumbs.dreamstime.com/z/location-map-navigation-icon-gps-pointer-mark-location-map-navigation-icon-gps-pointer-mark-business-travel-map-marker-red-colored-124924319.jpg"
+          texto2="Endereço:"
+          endereco="Rua 2 de julho"
+        />
+
       </div>
 
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
-        <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+        <CardGrande
+          imagem="https://pro2-bar-s3-cdn-cf6.myportfolio.com/63120a16-60cc-4009-93e1-3af75a7ea9d5/03f98bb8-b369-442d-9cb6-726ba582c773_rw_1920.jpg?h=f7eb1fd4b26d776e6bd23112ead7a852"
+          nome="Adsoft"
+          descricao="Trabalho com QA e Poduct Owner"
         />
-        
-        <CardGrande 
-          imagem={bancoDoBrasil} 
-          nome="Banco do Brasil" 
-          descricao="Escrituária" 
+
+        <CardGrande
+          imagem="http://3.bp.blogspot.com/-KV-869abbR8/Tyl7wN5TphI/AAAAAAAAAAc/pJYdI4Hixz4/s400/logo%2Badsoft%2Boficial.jpg"
+          nome="Adsoft"
+          descricao="Trabalhei co suporte em soft de automacao e gestao empresarial."
         />
       </div>
 
       <div className="page-section-container">
         <h2>Minhas redes sociais</h2>
-        <ImagemButton 
-          imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
-          texto="Facebook" 
-        />        
+        <ImagemButton
+          imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"
+          texto="Facebook"
+        />
 
-        <ImagemButton 
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
-          texto="Twitter" 
-        />        
+        <ImagemButton
+          imagem="https://i0.wp.com/trucao.com.br/wp-content/uploads/2018/07/instagram-logo.png?fit=1200%2C1200&ssl=1"
+          texto="Instagram"
+        />
       </div>
     </div>
   );
