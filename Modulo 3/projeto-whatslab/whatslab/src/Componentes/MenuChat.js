@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
-import { useState } from "react";
-import ReactDOM from 'react-dom';
+// import { useState } from "react";
+// import ReactDOM from 'react-dom';
+import { Component } from 'react';
 
 const ContainerMenuChat = styled.div`
    
@@ -54,26 +55,71 @@ const InputMensagem = styled.input`
 //const [name, setName] = useState("");
 
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("The name you entered was: ${}");
-  }
+// const handleSubmit = (event) => {
+//     event.preventDefault();
+//     console.log("The name you entered was: ${}");
+//   }
 
-function ContainerMenu(props) {
+export class ContainerMenu extends Component {
+    render() {
+        let exercicio;
+
+        switch (this.state.exercicioSelecionado) {
+          case "1":
+            exercicio = "Bananinha";
+            break;
+          case "2":
+            exercicio = "Maria";
+            break;
+          case "3":
+            exercicio = "Paulo";
+            break;
+          case "4":
+            exercicio = "Joao";
+            break;
+        //   case "5":
+        //     exercicio = <Exemplo5 />;
+        //     break;
+        //   case "6":
+        //     exercicio = <Exemplo6 />;
+        //     break;
+        //   case "7":
+        //     exercicio = <Exemplo7 />;
+        //     break;
+        //   case "8":
+        //     exercicio = <Exemplo8 />;
+        //     break;
+          default:
+            exercicio = null;
+        }
+    
+        const options = ["1", "2", "3", "4"];
+
+
+
     return (
         <div>
         <ContainerMenuChat>
-        <form onSubmit={handleSubmit}>
-         <InputUsuario type="text"  placeholder="Usuario" />
-         <InputMensagem  type="text"  placeholder="Mensagem" />
-         
-         <BotaoEnviar type="submit">Enviar</BotaoEnviar>
-         </form>
+        <select
+            placeholder="Mensagem"
+            value={this.state.exercicioSelecionado}
+            onChange={(e) =>
+              this.setState({ exercicioSelecionado: e.target.value })
+            }
+          >
+            {options.map((optionValue) => (
+              <option value={optionValue}>{optionValue}</option>
+            ))}
+          </select>
+         <InputUsuario   placeholder="Usuario" value={''}onChange={this.onChangeComentario}/>
+         <InputMensagem    placeholder="Mensagem"value={''}onChange={this.onChangeComentario} />
+         <BotaoEnviar onClick={this.props.aoEnviar}>Enviar</BotaoEnviar>
+        
          </ContainerMenuChat>
         
        </div>
     )
 }
-
+}
 
 export default ContainerMenu

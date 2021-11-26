@@ -14,17 +14,17 @@ class App extends React.Component {
     return (
       <MainContainer>
         <Post
-          nomeUsuario={'paulinha'}
+          nomeUsuario={'Paulinha'}
           fotoUsuario={'https://picsum.photos/50/70?random=1'}
           fotoPost={'https://picsum.photos/200/150?random=1'}
         />
            <Post
-          nomeUsuario={'paulinha'}
+          nomeUsuario={'Paulinho'}
           fotoUsuario={'https://picsum.photos/50/40?random=1'}
           fotoPost={'https://picsum.photos/200/190?random=1'}
         />
            <Post
-          nomeUsuario={'paulinha'}
+          nomeUsuario={'Pedrinho'}
           fotoUsuario={'https://picsum.photos/50/30?random=1'}
           fotoPost={'https://picsum.photos/200/130?random=1'}
         />
