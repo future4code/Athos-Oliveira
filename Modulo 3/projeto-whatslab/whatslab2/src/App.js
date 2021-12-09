@@ -80,16 +80,19 @@ const BalaoDaMensagem = styled.div`
 `;
 
 const ContainerControles = styled.div`
-  margin: 30px 10px;
+  margin: 1px 1px;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  column-gap: 10px;
+  column-gap: 1px;
+  position: fixed;
+  bottom: 1%;
 `;
 
 const ContainerMensagens = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 
 // Criar dois inputs: usuario e texto
 // Guardar o conteúdo dos inputs (input controlado)

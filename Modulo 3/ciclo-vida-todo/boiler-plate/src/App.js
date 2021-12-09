@@ -86,6 +86,7 @@ class App extends React.Component {
     }
     const novaListaTarefas = [...this.state.tarefas, novaTarefa]
     this.setState({ tarefas: novaListaTarefas })
+    console.log("ok produto encestado!!")
   }
 
   selectTarefa = (id) => {
@@ -142,7 +143,7 @@ class App extends React.Component {
             return (
               <Tarefa
                 completa={tarefa.completa}
-                onClick={() => this.selectTarefa(tarefa.id)}
+                onClick={(event) => this.selectTarefa(tarefa.id)}
               >
                 {tarefa.texto}
               </Tarefa>
