@@ -1,7 +1,7 @@
 import React from "react";
-import { Cadastro } from "./componentes/Cadastro";
-import { PlayLists } from "./componentes/PlayLists";
-import { ListaDetalhada } from "./componentes/ListaDetalhada";
+import { Cadastro } from "./componentes/cadastro";
+import { PlayLists } from "./componentes/play-list";
+//import { ListaDetalhada } from "./componentes/lista-detalhada";
 //import axios from 'axios' ;
 //import styled from "styled-components";
 
@@ -16,11 +16,10 @@ switch (this.state.home){
 case "cadastro":
   return <Cadastro goListas={this.goListas} />
   case "lista":
-    return <PlayLists  goLIstaDetalhada={this.goLIstaDetalhada}/> 
-    case "listaDetalhada":
-      return <ListaDetalhada  goCadastro={this.goCadastro}/>    
+    return <PlayLists   goCadastro={this.goCadastro}/>  
+ 
     default:
-      return <div>Erro 404 - pagina nao achada</div>
+      return <div>Erro 404 - pagina nao Encontrada</div>
 
 }
 

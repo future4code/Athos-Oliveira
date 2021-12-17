@@ -20,7 +20,7 @@ export class ListaDetalhada extends React.Component {
 
 
   getAllMusics = async (id) => {
-    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`
+    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idPlaylist}/tracks`
 
 try{
   const res = await axios.get(url,{
@@ -28,7 +28,7 @@ try{
           Authorization: "athos-de-oliveira-joy"
         }
   })
-  this.setState({ AllMusics: res.data.result.list })
+  this.setState({ AllMusics: res.data.result.tracks })
 
 } catch (err) {
   console.log("ERROR no GET das Musicas ")
@@ -57,7 +57,7 @@ try{
       <Container key={music.id}>
       {music.artist}
       {music.name}
-      {/* {music.url} */}
+ 
      <button onClick={() => this.deleteMusic(music.id)}>X</button>
       </Container>
     )})
@@ -65,11 +65,11 @@ try{
 
     return (
       <div>
-        <button onClick={this.props.goCadastro}>Ir para Cadastro</button>
-        <h1>Tela Musicas</h1>
-        {/* mostra lista do map */}
+        {/* <button onClick={this.props.goCadastro}>Ir para Cadastro</button> */}
+        <h1>Lista de Musicas (Play List)</h1>
+   
         {/* <div>{this.state.AllMusics.lenght && musicUpdate}</div> */}
-        {this.state.AllMusics.length ? musicUpdate : <p>Carregando</p>}
+        {this.state.AllMusics.length ? musicUpdate : <p></p>}
         {/* {this.musicUpdate} */}
       </div>
     );
