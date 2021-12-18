@@ -2,14 +2,8 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 
-// const FormCadastro = styled.form`
-//   display: flex;
-//   border: none;
-// `;
-
 const ContainerSecondario = styled.div`
   color: white;
-  /* text-align: center; */
   background-image: url("https://content.altexsoft.com/media/2019/04/big-data-consulting-bg.jpg");
   display: flex;
   justify-content: center;
@@ -20,13 +14,11 @@ const ContainerSecondario = styled.div`
   width: 120vw;
   height: 100vh;
   border: none;
-`;
-
-
+`
 const Titulo2 = styled.h1`
 margin-top: 10vh;
 margin-bottom: 10vh;
-`;
+`
 const VoltarCadastroPlayList = styled.button`
   width: 21vw;
   height: 8vh;
@@ -41,9 +33,8 @@ const VoltarCadastroPlayList = styled.button`
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
-
   :hover {
-    background: #5b1b69; //5b1b69 ac3ac6
+    background: #5b1b69; 
     opacity: 1px;
     border: 2% solid #ac3ac6;
   }
@@ -51,41 +42,33 @@ const VoltarCadastroPlayList = styled.button`
     background: #5b1b69;
     color: #fdfdfd;
     border: 2% solid #fdfdfd;
-  }
-`;
-
-
+  }`
 
 const NomeMusica = styled.p`
   font-size: 16px;
   display: inline-block;
   padding-right: 12px;
-`;
-
+`
 const BotaoDeletar = styled.button`
   background-color: #FF037C;//#f44336; 
   border: none;
   height:7vh;
   border-radius: 150px 0px 0px 150px; 
   color: white;
-  
   &:hover {
     background: #E80471;
     cursor: pointer;
-  }`;
+  }`
 
 const BotaoAdicionar = styled.button`
   background-color: #ac3ac6;
   border: none;
   border-radius: 0px 150px 150px 0px; 
   color: #ffffff;
-  
   height:7vh;
-  
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
-
   &:hover {
     background: #C92AEC;//#5b1b69;
     border: 2% solid #5b1b69;
@@ -96,22 +79,19 @@ const BotaoAdicionar = styled.button`
     color: #fdfdfd;
     border: 2% solid #fdfdfd;
   }
-`;
-
+`
 const BotaoSalvar = styled.button`
   background-color: #ac3ac6;
   border: none;
   border-radius: 0px 0px 150px 150px; 
   color: #ffffff;
-  
   height:7vh;
   width:16vw;
- 
   background: #892a9e;
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
-font-size:180%;
+  font-size:180%;
   :hover {
     background: #ac3ac6;
     opacity: 1px;
@@ -124,7 +104,7 @@ font-size:180%;
     border: 2% solid #fdfdfd;
   }`
 const DeleteMusic = styled.button`
-  background-color: #FF037C;//#f44336; 
+  background-color: #FF037C;
   border: none;
   height:7vh;
   border-radius: 150px ;
@@ -133,11 +113,7 @@ const DeleteMusic = styled.button`
   &:hover {
     background: #E80471;
     cursor: pointer;
-  }
-`
-
-
-
+  }`
 const ContainerPlay = styled.div`
   background: rgba(0, 0, 0, 0.7);
   color: white;
@@ -154,59 +130,45 @@ const ContainerPlay = styled.div`
   cursor: pointer;
   &:active {
     background-color: black;
-  }
-`;
-
+  }`
 const ContainerInputs = styled.div`
   display: block;
-
- 
-`;
-
+`
 const ConteinerAddRemove = styled.div`
 display:flex;
   justify-content: flex-end;
-  
 `
 const PlayMusic = styled.div`
-
 display:flex;
 flex-direction: column
-
 `
-
 const Inputs = styled.input`
   border: none;
   border-radius: 10px;
   padding: 8px;
   margin: 8px 0;
   width: 70%;
-`;
-
+`
 const Tracks = styled.audio`
   display: flex;
   height: 36px;
   margin-bottom: 8px;
   border-radius: 8px;
   width: 450px;
-`;
-
+`
 const PlayListaNome = styled.div`
 font-size:150% large;
-
 `
-
 export class PlayLists extends React.Component {
-  //guarda usuarios para mostrar
+ 
   state = {
     AllLists: [],
     nameMusic: "",
     nameArtist: "",
     urlMusic: "",
     AllTracks: []
-    //selectComponent: undefined,
-  };
-  //monta funcao
+  }
+
   componentDidMount() {
     this.getAllLists();
   }
