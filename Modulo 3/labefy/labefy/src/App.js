@@ -1,9 +1,35 @@
 import React from "react";
 import { Cadastro } from "./componentes/cadastro";
 import { PlayLists } from "./componentes/play-list";
-//import { ListaDetalhada } from "./componentes/lista-detalhada";
-//import axios from 'axios' ;
-//import styled from "styled-components";
+
+import styled from "styled-components";
+
+const Body  = styled.div`
+display:flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+`
+
+
+// const ContainerPrincipal = styled.div`
+// color:white;
+// text-align:center;
+// background-image:url("https://content.altexsoft.com/media/2019/04/ai-solutions-bg.jpg");
+// display: flex;
+// justify-content: center;
+// flex-direction: column;
+// align-items: center;
+// margin:0;
+// padding: 0;
+// `
+
+
+
 
 export default class App extends React.Component  {
  state = {
@@ -38,11 +64,13 @@ this.setState({home: "lista"})
 
   render(){
   return (
-    <div>
+    <Body>
+     
+
       {this.selectPages()} 
   
 
-    </div>
+    </Body>
   );
 }
 }
