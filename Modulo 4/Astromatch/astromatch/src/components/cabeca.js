@@ -32,12 +32,13 @@ function Cabeca() {
       <div>
         <Imagem src="/img/astromatch.jpeg" />
       </div>
-
+      <button>X</button>
       {mudaTela ? (
         setmudaTela(
           <Container>
             <div>
               <Carinhas src="/img/carinhas.jpeg" />
+            
             </div>
           </Container>
         )
