@@ -8,15 +8,20 @@ export const AdminHomePage = () => {
     history.goBack();
   };
 
-  // const goToAdminHomePage = () => {
-  //   history.push("/admin/trips/list");
-  // };
+  const goToCreateTripPage = () => {
+    history.push("/admin/trips/create");
+  };
+
+  const goLogout = () => {
+    history.replace("/login");
+  };
 
   return (
     <div>
       Painel Administrativo
       <button onClick={goBack}>Voltar</button>
-      <button> Enviar</button>
+      <button onClick={goToCreateTripPage}> Cria Viagem</button>
+      <button onClick={goLogout}>Logout</button>
     </div>
   );
 };

@@ -1,16 +1,20 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 
-export const ApplicationFormPage = () => {
+export const CreateTripPage = () => {
   const history = useHistory();
 
   const goBack = () => {
     history.goBack();
   };
 
+  // const goToApplicationFormPage = () => {
+  //   history.push("/trips/application");
+  // };
+
   return (
     <div>
-      Inscreva-se para uma viagem
+      Cria viagem
       <input placeholder="text" />
       <input placeholder="Nome" />
       <input placeholder="Idade" />
