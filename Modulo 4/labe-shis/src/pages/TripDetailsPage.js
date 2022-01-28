@@ -1,11 +1,12 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
 import {
   makeStyles,
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -27,9 +28,12 @@ const Body = styled.div`
   border: none;
 `;
 
-const Button2 = styled.button`
-margin: 2%;
-`
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+`;
 
 const Titulo1 = styled.h1`
   margin-top: 10vh;
@@ -43,37 +47,28 @@ const customTheme = createMuiTheme({
   }
 });
 
-export const HomePage = () => {
+export const TripDetailsPage = () => {
   const history = useHistory();
 
-  const goToAreaAdmin = () => {
-    history.push("/login");
+  const goBack = () => {
+    history.goBack();
   };
 
-  const goToListTripsPage = () => {
-    history.push("/trips/list");
-  };
+ 
 
   return (
     <Body>
-      <Titulo1>LABE X</Titulo1>
-  
-      <p>
+      <Titulo1>Nome</Titulo1>
+
+      <Body2>
         <ThemeProvider theme={customTheme}>
-          
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={goToListTripsPage}
-          >
-            Lista de Viagens
-          </Button>
-         
-          <Button color="primary" variant="contained" onClick={goToAreaAdmin}>
-            Area Adm
-          </Button>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goBack}>
+              Voltar
+            </Button>
+          </Box>
         </ThemeProvider>
-      </p>
+      </Body2>
     </Body>
   );
 };

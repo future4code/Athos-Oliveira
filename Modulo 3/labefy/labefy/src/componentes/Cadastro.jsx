@@ -9,7 +9,7 @@ const FormCadastro = styled.form`
 const ContainerPrincipal = styled.div`
   color: white;
   text-align: center;
-  background-image: url("https://content.altexsoft.com/media/2019/04/ai-solutions-bg.jpg");
+  background-image: url("https://s1.1zoom.me/b5050/402/Planets_Clouds_558854_1920x1080.jpg");
   display: flex;
   justify-content: center;
   flex-direction: column;

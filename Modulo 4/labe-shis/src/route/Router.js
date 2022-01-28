@@ -1,10 +1,11 @@
 import { ListTripsPage } from "../pages/ListTripsPage";
-import { ErrorPage } from "../pages/ErrorPage";
+import { TripDetailsPage } from "../pages/TripDetailsPage";
+
 import { HomePage } from "../pages/HomePage";
 import { AreaAdmin } from "../pages/AreaAdmin";
 import { ApplicationFormPage } from "../pages/ApplicationFormPage";
 import { AdminHomePage } from "../pages/AdminHomePage";
-
+import { CreateTripPage } from "../pages/CreateTripPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 export const Router = () => {
@@ -31,8 +32,12 @@ export const Router = () => {
           <AdminHomePage />
         </Route>
 
-        <Route>
-          <ErrorPage />
+        <Route exact path={"/admin/trips/create"}>
+          <CreateTripPage />
+        </Route>
+
+        <Route exact path={"/admin/trips/:id"}>
+          <TripDetailsPage />
         </Route>
       </Switch>
     </BrowserRouter>
