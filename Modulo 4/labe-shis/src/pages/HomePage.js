@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import Box from "@material-ui/core/Box";
 import {
   makeStyles,
   createMuiTheme,
@@ -14,7 +15,7 @@ import { lightGreen, blue, purple, pink } from "@material-ui/core/colors";
 
 const Body = styled.div`
   color: white;
-  text-align: center;
+  text-align: center;background-size: cover;
   background-image: url("https://s1.1zoom.me/b5050/402/Planets_Clouds_558854_1920x1080.jpg");
   display: flex;
   justify-content: center;
@@ -26,10 +27,12 @@ const Body = styled.div`
   height: 100vh;
   border: none;
 `;
-
-const Button2 = styled.button`
-margin: 2%;
-`
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+`;
 
 const Titulo1 = styled.h1`
   margin-top: 10vh;
@@ -57,23 +60,25 @@ export const HomePage = () => {
   return (
     <Body>
       <Titulo1>LABE X</Titulo1>
-  
-      <p>
+
+      <Body2>
         <ThemeProvider theme={customTheme}>
-          
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={goToListTripsPage}
-          >
-            Lista de Viagens
-          </Button>
-         
-          <Button color="primary" variant="contained" onClick={goToAreaAdmin}>
-            Area Adm
-          </Button>
+          <Box m={2} pt={0}>
+            <Button
+              color="secondary"
+              variant="contained"
+              onClick={goToListTripsPage}
+            >
+              Lista de Viagens
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button color="primary" variant="contained" onClick={goToAreaAdmin}>
+              Area Adm
+            </Button>
+          </Box>
         </ThemeProvider>
-      </p>
+      </Body2>
     </Body>
   );
 };

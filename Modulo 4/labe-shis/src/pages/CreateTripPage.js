@@ -6,6 +6,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -25,14 +26,13 @@ const Body = styled.div`
   width: 100vw;
   height: 100vh;
   border: none;
+`;
 
-  /* display: flex;
-
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  justify-content: center; */
 `;
 
 const Titulo1 = styled.h1`
@@ -68,15 +68,21 @@ export const CreateTripPage = () => {
       <input placeholder="Candidatura" />
       <input placeholder="Profissao" />
       <input placeholder="Paiz" />
-      <ThemeProvider theme={customTheme}>
-        <Button color="secondary" variant="contained" onClick={goBack}>
-          Voltar
-        </Button>
 
-        <Button color="primary" variant="contained">
-          Enviar
-        </Button>
-      </ThemeProvider>
+      <Body2>
+        <ThemeProvider theme={customTheme}>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goBack}>
+              Voltar
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button color="primary" variant="contained">
+              Enviar
+            </Button>
+          </Box>
+        </ThemeProvider>
+      </Body2>
     </Body>
   );
 };

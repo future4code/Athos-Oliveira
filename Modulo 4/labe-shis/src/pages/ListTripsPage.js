@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
+import Box from "@material-ui/core/Box";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -21,14 +22,13 @@ const Body = styled.div`
   width: 100vw;
   height: 100vh;
   border: none;
+`;
 
-  /* display: flex;
-
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  justify-content: center; */
 `;
 
 const Titulo1 = styled.h1`
@@ -56,40 +56,25 @@ export const ListTripsPage = () => {
 
   return (
     <Body>
-      {/* {language === "pt" ? (
-        <p>
-          <b>Sobre nos: </b>Na Labenu você aprende a programar do zero! Nossa
-          formação Web Full Stack contém experiências focadas em empregabilidade
-          para ingressar no mercado de tecnologia. O curso tem duração de 6
-          meses no modelo integral ou 12 meses no modelo noturno. Aulas ao vivo
-          e de onde você estiver.
-        </p>
-      ) : (
-        <p>
-          <b>About us: </b>At Labenu you learn to program from scratch! Our Web
-          Full Stack training contains experiences focused on employability to
-          enter the technology market. The course lasts for 6 months in the full
-          model or 12 months in the evening model. Live classes wherever you
-          are.
-        </p>
-      )} */}
-      <p>
-        <Titulo1>Lista de Viagens</Titulo1>
-
+      <Titulo1>Lista de Viagens</Titulo1>
+      <Body2>
         <ThemeProvider theme={customTheme}>
-          <Button color="secondary" variant="contained" onClick={goBack}>
-            Voltar
-          </Button>
-
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={goToApplicationFormPage}
-          >
-            Inscrevar-se
-          </Button>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goBack}>
+              Voltar
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={goToApplicationFormPage}
+            >
+              Inscrevar-se
+            </Button>
+          </Box>
         </ThemeProvider>
-      </p>
+      </Body2>
     </Body>
   );
 };

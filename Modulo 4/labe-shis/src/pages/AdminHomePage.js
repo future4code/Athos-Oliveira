@@ -6,6 +6,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -15,6 +16,7 @@ import { lightGreen, blue, purple, pink } from "@material-ui/core/colors";
 const Body = styled.div`
   color: white;
   text-align: center;
+  background-size: cover;
   background-image: url("https://s1.1zoom.me/b5050/402/Planets_Clouds_558854_1920x1080.jpg");
   display: flex;
   justify-content: center;
@@ -34,7 +36,12 @@ const Body = styled.div`
   align-items: center;
   justify-content: center; */
 `;
-
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+`;
 const Titulo1 = styled.h1`
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -51,7 +58,7 @@ export const AdminHomePage = () => {
   const history = useHistory();
 
   const goBack = () => {
-    history.goBack();
+    history.push("/");
   };
 
   const goToCreateTripPage = () => {
@@ -65,24 +72,29 @@ export const AdminHomePage = () => {
   return (
     <Body>
       <Titulo1>Painel Administrativo</Titulo1>
-
-      <ThemeProvider theme={customTheme}>
-        <Button color="secondary" variant="contained" onClick={goBack}>
-          Voltar
-        </Button>
-
-        <Button
-          color="primary"
-          variant="contained"
-          onClick={goToCreateTripPage}
-        >
-          Cria Viagem
-        </Button>
-
-        <Button color="secondary" variant="contained" onClick={goLogout}>
-          Logout
-        </Button>
-      </ThemeProvider>
+      <Body2>
+        <ThemeProvider theme={customTheme}>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goBack}>
+              Voltar
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={goToCreateTripPage}
+            >
+              Cria Viagem
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goLogout}>
+              Logout
+            </Button>
+          </Box>
+        </ThemeProvider>
+      </Body2>
     </Body>
   );
 };

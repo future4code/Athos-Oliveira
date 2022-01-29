@@ -13,6 +13,10 @@ import Container from "@material-ui/core/Container";
 import SaveIcon from "@material-ui/icons/Save";
 import { lightGreen, blue, purple, pink } from "@material-ui/core/colors";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../constants/url";
+
 const Body = styled.div`
   color: white;
   text-align: center;
@@ -54,7 +58,29 @@ export const TripDetailsPage = () => {
     history.goBack();
   };
 
- 
+  // const goToApplicationFormPage = () => {
+  //   history.push("/trips/application");
+  // };
+  const { id } = useParams();
+  const [trip, setTrip] = useState("");
+
+  useEffect(() => {
+    const fetch = async () => {
+      const { data } = await axios.get(
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/athos-de-oliveira-joy/trips/${id}`,
+        {
+          headers: {
+            auth: localStorage.getItem("token")
+          }
+        }
+      );
+      setTrip(data);
+    };
+    const token = localStorage.getItem("token")
+if(token)fetch();
+else history.replace("/login");
+    
+  }, []);
 
   return (
     <Body>

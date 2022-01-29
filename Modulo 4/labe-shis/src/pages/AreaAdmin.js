@@ -1,11 +1,15 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL, BASE_url } from "../constants/url";
 import styled from "styled-components";
 import {
   makeStyles,
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -34,7 +38,12 @@ const Body = styled.div`
   align-items: center;
   justify-content: center; */
 `;
-
+const Body2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+`;
 const Titulo1 = styled.h1`
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -53,24 +62,62 @@ export const AreaAdmin = () => {
   const goBack = () => {
     history.goBack();
   };
-  const goToAdminHomePage = () => {
-    history.push("/admin/trips/list");
+  // const goToAdminHomePage = () => {
+  //   history.push("/admin/trips/list");
+  // };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onChangerEmail = ({ target }) => {
+    setEmail(target.value);
+  };
+
+  const onChangerPassword = ({ target }) => {
+    setPassword(target.value);
+  };
+  const onSubmitLogin = (event) => {
+    event.preventDefault();
+    const body = { email: email, password: password };
+    axios
+      .post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login", 
+      body
+     
+      )
+      .then(({ data }) => {
+        alert("Bem Vindo a area Exclusiva")
+        localStorage.setItem("token", data.token);
+        history.push("/admin/trips/list");
+      })
+      .catch((res) => console.log(res));
+      alert("Email/Senha Invalidos ")
   };
 
   return (
     <Body>
       <Titulo1>Login</Titulo1>
-      <input placeholder="Nome" />
-      <input placeholder="Senha" />
-      <ThemeProvider theme={customTheme}>
-        <Button color="secondary" variant="contained" onClick={goBack}>
-          Voltar
-        </Button>
+      <input placeholder="Email" value={email} onChange={onChangerEmail} />
+      <input placeholder="Senha" value={password} onChange={onChangerPassword} />
 
-        <Button color="primary" variant="contained" onClick={goToAdminHomePage}>
-          Entrar
-        </Button>
-      </ThemeProvider>
+      <Body2>
+        <ThemeProvider theme={customTheme}>
+          <Box m={2} pt={0}>
+            <Button color="secondary" variant="contained" onClick={goBack}>
+              Voltar
+            </Button>
+          </Box>
+          <Box m={2} pt={0}>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={onSubmitLogin}
+              // onClick={goToAdminHomePage}
+            >
+              Entrar
+            </Button>
+          </Box>
+        </ThemeProvider>
+      </Body2>
     </Body>
   );
 };
