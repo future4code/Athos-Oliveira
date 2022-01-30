@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import useForm from "../hooks/useForm";
 import styled from "styled-components";
 import Box from "@material-ui/core/Box";
 import {
@@ -15,6 +16,7 @@ import { lightGreen, blue, purple, pink } from "@material-ui/core/colors";
 
 const Body = styled.div`
   color: white;
+  font-family: Roboto ;
   text-align: center;background-size: cover;
   background-image: url("https://s1.1zoom.me/b5050/402/Planets_Clouds_558854_1920x1080.jpg");
   display: flex;
@@ -29,6 +31,7 @@ const Body = styled.div`
 `;
 const Body2 = styled.div`
   display: flex;
+  font-family: Roboto ;
   justify-content: center;
   flex-direction: row;
   align-items: center;
@@ -36,6 +39,7 @@ const Body2 = styled.div`
 
 const Titulo1 = styled.h1`
   margin-top: 10vh;
+  font-family: Roboto ;
   margin-bottom: 10vh;
 `;
 
