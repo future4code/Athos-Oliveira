@@ -38,6 +38,8 @@ const BotaoEnviar = styled.button`
     :hover{
         background:#2277ff;
         border: 2% solid #2277ff;
+     
+
     }
     :active{
         background:gray;

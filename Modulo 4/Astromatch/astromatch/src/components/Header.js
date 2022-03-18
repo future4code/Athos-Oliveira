@@ -21,9 +21,8 @@ const Header = (props) => {
       <IconButton onClick={props.voltarInicio}>
         <img
           className="header__logo"
-          // src="https://image.flaticon.com/icons/png/512/408/408790.png"
-          src="../image/logo.png"
-          alt="Logo-Astromatch"
+          src="https://cdn-icons-png.flaticon.com/512/3800/3800023.png"
+          alt="Astromatch"
         />
       </IconButton>
       <IconButton>
