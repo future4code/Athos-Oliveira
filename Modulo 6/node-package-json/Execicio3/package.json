@@ -1,0 +1,11 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index3.js"
+  },
+  "author": "ath",
+  "license": "ISC"
+}
