@@ -9,61 +9,96 @@
 
 // }
 
-// type Pessoa = {
-// nome:string;
-// idade:number;
-// cor:CorFavorita;
-// }
+// // type Pessoa = {
+// // nome:string;
+// // idade:number;
+// // cor:CorFavorita;
+// // }
 
-// const pessoa : Pessoa ={
-// nome :"ath",
-// idade : 69,
-// cor:CorFavorita.BLUE
-// }
+// // const pessoa : Pessoa ={
+// // nome :"ath",
+// // idade : 69,
+// // cor:CorFavorita.BLUE
+// // }
 
-// console.table(pessoa)
+// // console.table(pessoa)
 
-//execicio 2
+// //execicio 2
 
-// type AmostraDeDados ={
-//   numeros:number
 
+// type Obter = {
+//   maior:number,
+//   menor:number,
+//   media:number,
 //   }
 
-// const amostraDeIdades:AmostraDeDados = {
+// const notas:number[] = [21, 18, 65, 44, 15, 18]
 
-//   numeros: [21, 18, 65, 44, 15, 18],
+// function obterEstatisticas(numeros:number[]):number {
 
-//   obterEstatisticas: (numeros) => {...}
+//   const numerosOrdenados:number[] = numeros.sort((a, b) => a - b)
+ 
+
+
+//   let mun:number = 0 
+//   let soma:number = 0
+
+//   for (let num of numeros) {
+//       soma += num
+//   }
+
+//   const estatisticas: any = {
+//       maior: numerosOrdenados[numeros.length - 1],
+//       menor: numerosOrdenados[0],
+//       media: soma / numeros.length
+//   }
+
+//   return estatisticas
 // }
-let numeros1: [21, 18, 65, 44, 15, 18]
-type TypeMestre ={
-  numeros:number,
-  soma:number,
-  maior:number,
-  menor:number,
-  media:number
+//  console.table(obterEstatisticas(notas))
+
+
+//execicio 3
+const posts = [
+  {
+    autor: "Alvo Dumbledore",
+    texto: "Não vale a pena viver sonhando e se esquecer de viver"
+  },
+  {
+    autor: "Severo Snape",
+    texto: "Menos 10 pontos para Grifinória!"
+  },
+  {
+    autor: "Hermione Granger",
+    texto: "É levi-ô-sa, não levio-sá!"
+  },
+  {
+    autor: "Dobby",
+    texto: "Dobby é um elfo livre!"
+  },
+  {
+    autor: "Lord Voldemort",
+    texto: "Avada Kedavra!"
   }
+]
 
-function obterEstatisticas(numeros):number {
-let a:any = 0
-let b:any = 0
-  const numerosOrdenados:any = numeros.sort(
-      (a, b) => a - b
-  )
 
-  let soma:number = 0
+//execicio 5
+// type Consulta = {
+//   nome:string;
+//   idade:number;
+//   dataDaConsulta:string;
+// }
 
-  for (let num of numeros) {
-      soma += num
-  }
-
-  const estatisticas = {
-      maior: numerosOrdenados[numeros.length - 1],
-      menor: numerosOrdenados[0],
-      media: soma / numeros.length
-  }
-
-  return estatisticas
-}
-console.log(obterEstatisticas())
+// const consultas: Consulta[] = [
+//   {nome: "Maria", idade: 22, dataDaConsulta: "01/01/2011"},
+//   {nome: "Luigi", idade: 12, dataDaConsulta: "01/01/2001"},
+//   {nome: "Mario", idade: 76, dataDaConsulta: "01/01/2021"}
+// ]
+// function ordenaConsulta(consulta:Consulta[]):Consulta[]{
+//   const consultaOrdenada: Consulta[] = consulta.sort((a,b)=>{
+//     return a.nome.localeCompare(b.nome)
+//   })
+// return consultaOrdenada
+// }
+// console.table(ordenaConsulta(consultas))
