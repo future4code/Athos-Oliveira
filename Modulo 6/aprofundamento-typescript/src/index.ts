@@ -91,6 +91,8 @@
 //   )
 // }
 //  console.table(buscarPostsPorAutor(posts))
+//execicio 4
+
 
 //execicio 5
 // type Consulta = {
