@@ -35,7 +35,7 @@ app.get('/', (request,  response) =>{
 //Execicio 4
 app.get('/apoios', (request,  response) =>{
 	
-	const listaApoios = users.map((a => a.nome))
+	const listaApoios = users.map((a => a.mes))
 
 	response.status(200).send(listaApoios)
 	const id = request.params
