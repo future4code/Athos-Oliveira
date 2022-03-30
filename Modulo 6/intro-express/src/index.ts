@@ -34,10 +34,22 @@ app.get('/', (request,  response) =>{
 
 //Execicio 4
 app.get('/apoios', (request,  response) =>{
-	response.status(200).send("get OK")
-	console.log("ok")
+	
+	const listaApoios = users.map((a => a.nome))
+
+	response.status(200).send(listaApoios)
 	const id = request.params
 	const senha = request.headers
 	const nome = request.body
 	console.log(id,senha,nome)
 })
+//execicio 5
+app.get('/posts', (request,  response) =>{
+	
+	const id = request.params
+	const userId = request.headers
+	const title = request.body
+	const body = request.body
+})
+
+
