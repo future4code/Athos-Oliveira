@@ -1,43 +1,26 @@
-export const users = [
-  {
-     id: 'tayanne-novais-gebru',
-     playlists: [
-        {
-           id: '28e07ef5-4c6f-4478-9998-1fae4c6d4745',
-           name: 'mpb',
-           tracks: [
+//Execicio 2
+type cadastroUsuario = {
+id:string,
+name:string,
+phone:number,
+email:string,
+website:string
+}
+//Execicio 3
+export const users:cadastroUsuario[] = [
+ 
               {
-                 id: '8b4215f1-950b-4c06-bfd6-80c2f8d1bb19',
-                 name: 'Oração',
-                 artist: 'Linn da Quebrada',
-                 url: 'https://www.youtube.com/watch?v=y5rY2N1XuLI',
+                 id: '8b4215f1',
+                 name: 'Elza Linn da Quebrada',
+                 phone: 73999055858,
+                 email: 'Elza@gmail.com',
+                 website: 'www.naointendi.com.br'
               },
               {
-                 id: '8b4215f1-950b-4c06-bfd6-80c2f8d1bc49',
-                 name: 'Mulher do Fim do Mundo',
-                 artist: 'Elza Soares',
-                 url: 'https://www.youtube.com/watch?v=6SWIwW9mg8s',
+                 id: '8b4215f2',
+                 name: 'Linn Soares',
+                 phone: 71999055852,
+                 email: 'Linn@gmail.com',
+                 website: 'www.Linn.com.br',
               },
-           ],
-        },
-        {
-           id: '28e07ef5-4c6f-4478-9998-1fae4c6d4543',
-           name: 'Rock',
-           tracks: [
-              {
-                 id: '8b4215f1-950b-4c06-bfd6-80c2f8d1cc08',
-                 name: 'Céu Azul',
-                 artist: 'Charlie Brown Jr.',
-                 url: 'https://www.youtube.com/watch?v=0dLX40UMUKo',
-              },
-              {
-                 id: '8b4215f1-950b-4c06-bfd6-80c2f8d1bc75',
-                 name: 'By The Way',
-                 artist: 'Red Hot Chili Peppers',
-                 url: 'https://www.youtube.com/watch?v=YXdOAUKCc0k',
-              },
-           ],
-        },
-     ],
-  },
-];
+]
