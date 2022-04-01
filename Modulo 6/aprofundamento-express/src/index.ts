@@ -24,10 +24,10 @@ app.use(cors())
 app.get("/ping", (request:Request, response:Response) =>{
 	response.status(200).send("pong")
 })
-app.get("/todo", (request:Request, response:Response) =>{
-	
-	let statusAll = listaTarefas
-	response.status(200).send(statusAll)
+app.get("/todas", (request:Request, response:Response) =>{
+	let todas = listaTarefas.map((list) => list )
+	//let statusAll = listaTarefas
+	response.status(200).send(todas)
 
 
 })
@@ -77,7 +77,23 @@ return tarefa.id == request.params.id})
 })
 //execicio 7
 
+app.delete("/afazer/:id", (request:Request, response:Response)=>{
 
+	let atualizaTarefa = listaTarefas.find((tarefa: any) =>{
+		return tarefa.id == request.params.id})
+		
+			if(!atualizaTarefa){
+				response.status(404).send("")
+				return
+			}
+			 atualizaTarefa.title = request.body.title
+			 atualizaTarefa.id = request.body.id
+			 atualizaTarefa.userId = request.body.userId
+			 atualizaTarefa.completed = request.body.completed
+		
+		
+			response.status(201).send(listaTarefas)
+})
 
 
 
