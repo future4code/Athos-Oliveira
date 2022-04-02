@@ -2,21 +2,10 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { clientes } from './data';
 import { v4 as generateId } from 'uuid';
-import { flattenDiagnosticMessageText, idText } from 'typescript';
-// import { AddressInfo } from "net";
 
 const app = express();
 app.use(express.json());
 app.use(cors())
-
-// const server = app.listen(process.env.PORT || 3001, () => {
-//   if (server) {
-//     const address = server.address() as AddressInfo;
-//     console.log(`Server is running in http://localhost:${address.port}`);
-//   } else {
-//     console.error(`Failure upon starting server.`);
-//   }
-// });
 
 
 //mostrar todas as contas
@@ -100,27 +89,6 @@ app.put("/contas/:clienteId", (request: Request, response: Response) => {
 	atualizaSaldo.saldo = request.body.saldo
 	response.status(201).send(clientes)
 })
-// //execicio 7
-
-// app.delete("/afazer/:id", (request:Request, response:Response)=>{
-
-// 	let atualizaTarefa = listaTarefas.find((tarefa: any) =>{
-// 		return tarefa.id == request.params.id})
-
-// 			if(!atualizaTarefa){
-// 				response.status(404).send("")
-// 				return
-// 			}
-// 			 atualizaTarefa.title = request.body.title
-// 			 atualizaTarefa.id = request.body.id
-// 			 atualizaTarefa.userId = request.body.userId
-// 			 atualizaTarefa.completed = request.body.completed
-
-
-// 			response.status(201).send(listaTarefas)
-// })
-
-
 
 app.listen(3000, () => {
 	console.log("Sistem Online... OK")
