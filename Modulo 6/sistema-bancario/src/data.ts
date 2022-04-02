@@ -1,7 +1,7 @@
 
 type cliente = {
-		userId: string,
-		CPF: string,
+		clienteId: string,
+		cpf: string,
 		nome: string,
 		nascimento: string,
 		saldo: number,
@@ -15,8 +15,8 @@ type transacoes = {
 
 export const clientes: cliente[] = [
 	{
-		userId: "1",
-		CPF: "013.117.115-57",
+		clienteId: "1",
+		cpf: "013.117.115-57",
 		nome: "Mr. Astrobot",
 		nascimento: "20/07/1987",
 		saldo: 100,
@@ -34,8 +34,8 @@ export const clientes: cliente[] = [
 		]
 	},
 	{
-		userId: "2",
-		CPF: "011.117.115-57",
+		clienteId: "2",
+		cpf: "213.217.215-27",
 		nome: "Mr. AstroMath",
 		nascimento: "10/07/1987",
 		saldo: 150,

@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { clientes } from './data';
-// import { v4 as generateId } from 'uuid';
-// import { flattenDiagnosticMessageText, idText } from 'typescript';
+import { v4 as generateId } from 'uuid';
+import { flattenDiagnosticMessageText, idText } from 'typescript';
 // import { AddressInfo } from "net";
 
 const app = express();
@@ -19,63 +19,94 @@ app.use(cors())
 // });
 
 
-
-app.get("/contas", (request:Request, response:Response) =>{
-	let contas = clientes.map((client) => client )
+//mostrar todas as contas
+app.get("/contas", (request: Request, response: Response) => {
+	let contas = clientes.map((client) => client)
 	response.status(200).send(contas)
 
 })
+//adiciona nova conta somente maiores de 18, CPF distintos
+app.post("/novo", (request: Request, response: Response) => {
 
-// app.get("/Concluido", (request:Request, response:Response) =>{
-// 	let statusOK = listaTarefas.filter((list) => list.completed == true)
-// 	//let statusOK = listaTarefas.find((list) => list.completed == true)
-// 	if(!statusOK){
-// 		response.status(404).send("sem tarefas")
-// 		return
-// 	}
+	const cpfNovo = request.body.cpf
+	const nascimento = request.body.nascimento
+	const nome = request.body.nome
 
-// 	response.status(201).send(statusOK)
+	const verificacpf = clientes.map((user) => user.cpf).flat(1);
+	const cpfVerificado = verificacpf.filter((verifica: any) => verifica == request.body.cpf);
 
-// });
-// //execicio 5
-// app.post("/afazer", (request:Request, response:Response)=>{
+	if (!cpfVerificado) {
+		response.status(404).send("CPF Invalido!");
+		return
+	}
 
-// 	const id = request.body.id
-// 	const title = request.body.title
-// 	const completed = request.body.completed
-
-// 	const novaTarefa = {
-// 		userId:generateId(),
-// 		id:id,
-// 		title:title,
-// 		completed:completed
-// 	}
-// 	listaTarefas.push(novaTarefa);
-// 	response.status(201).send(listaTarefas)
-// })
-// //execicio 6 
-// app.put("/afazer/:id", (request:Request, response:Response)=>{
-
-// let atualizaTarefa = listaTarefas.find((tarefa: any) =>{
-// return tarefa.id == request.params.id})
-
-// 	if(!atualizaTarefa){
-// 		response.status(404).send("")
-// 		return
-// 	}
-// 	 atualizaTarefa.title = request.body.title
-// 	 atualizaTarefa.completed = request.body.completed
+	if (cpfVerificado[0] === cpfNovo) {
+		response.status(404).send("CPF ja cadastrado para outro usuario")
+		return
+	}
 
 
-// 	response.status(201).send(listaTarefas)
-// })
+	const dia = new Date();
+	let anoAtual = dia.getFullYear()
+
+	let anoNascimento = nascimento.split("/");
+	let dataNascimento = anoNascimento[2]
+	if (anoAtual - dataNascimento < 18) {
+		let idade = anoAtual - dataNascimento
+		console.log(idade)
+		response.status(404).send(`Sua idade é: ${idade}, Politicas impedem criação de contas para menores de 18 anos`)
+		return
+	}
+
+	const novaConta = {
+		clienteId: generateId(),
+		cpf: cpfNovo,
+		nome: nome,
+		nascimento: nascimento,
+		saldo: 0,
+		extrato: []
+	}
+	clientes.push(novaConta);
+	response.status(201).send(clientes)
+})
+//consulta saldo por cpf
+app.get("/contas/:cpf", (request: Request, response: Response) => {
+
+	const cpfNovo = request.params.cpf		
+			const verificacpf = clientes.map((user) => user.cpf).flat(1);
+			const cpfVerificado = verificacpf.filter((verifica: any) => verifica == request.params.cpf);
+		
+			if (cpfVerificado[0] !== cpfNovo) {
+				response.status(404).send("CPF Invalido!")
+				return
+			}
+
+	let contas = clientes.filter((cliente: any) => {
+		return	 cliente.cpf == request.params.cpf
+			}).map(a => a.saldo).toString()
+
+	response.status(200).send(contas)
+})
+
+//atualiza saldo
+app.put("/contas/:clienteId", (request: Request, response: Response) => {
+	let atualizaSaldo = clientes.find((saldo: any) => {
+		return saldo.clienteId == request.params.clienteId
+	})
+	if (!atualizaSaldo) {
+		response.status(404).send("")
+		return
+	}
+	atualizaSaldo.saldo = request.body.saldo
+	response.status(201).send(clientes)
+})
 // //execicio 7
 
 // app.delete("/afazer/:id", (request:Request, response:Response)=>{
 
 // 	let atualizaTarefa = listaTarefas.find((tarefa: any) =>{
 // 		return tarefa.id == request.params.id})
-		
+
 // 			if(!atualizaTarefa){
 // 				response.status(404).send("")
 // 				return
@@ -84,45 +115,13 @@ app.get("/contas", (request:Request, response:Response) =>{
 // 			 atualizaTarefa.id = request.body.id
 // 			 atualizaTarefa.userId = request.body.userId
 // 			 atualizaTarefa.completed = request.body.completed
-		
-		
+
+
 // 			response.status(201).send(listaTarefas)
 // })
 
 
 
-
-// //execicios anteiores
-// app.get('/', (request,  response) =>{
-// 	response.status(200).send("get OK")
-// 	console.log("ok")
-// 	const id = request.params
-// 	const senha = request.headers.autorization
-// 	const nome = request.body
-// 	console.log(id,senha,nome)
-// })
-
-// //Execicio 4
-// app.get('/apoios', (request,  response) =>{
-	
-// 	const listaApoios = users.map((a => a.mes))
-
-// 	response.status(200).send(listaApoios)
-// 	const id = request.params
-// 	const senha = request.headers
-// 	const nome = request.body
-// 	console.log(id,senha,nome)
-// })
-// //execicio 5
-// app.get('/posts', (request,  response) =>{
-	
-// 	const id = request.params
-// 	const userId = request.headers
-// 	const title = request.body
-// 	const body = request.body
-// })
-
-
-app.listen(3000, ()=> {
+app.listen(3000, () => {
 	console.log("Sistem Online... OK")
 })
