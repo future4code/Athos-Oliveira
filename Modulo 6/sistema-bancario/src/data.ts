@@ -1,39 +1,55 @@
-//Execicio 2
 
-type cadastroUsuario = {
-   id: string,
-   nome: string,
-   celular: string,
-   email: string,
-   website: string,
- 
+type cliente = {
+		userId: string,
+		CPF: string,
+		nome: string,
+		nascimento: string,
+		saldo: number,
+		extrato:transacoes[]
+}
+type transacoes = {
+	data: string,
+	descricao: string,
+	debido: number,
 }
 
-type objeto = { 
-   mes: string
-   apoios: cadastroUsuario[]
-   }
-
-//Execicio 3
-export const users: objeto[] = [
-   { 
-   mes:"janeiro",
-   apoios:[
-         {
-            id: '8b4215f1',
-            nome: 'Elza Linn da Quebrada',
-            celular: "73999055858",
-            email: 'Elza@gmail.com',
-            website: 'www.naointendi.com.br'
-         },
-         {
-            id: '8b4215f2',
-            nome: 'Linn Soares',
-            celular: "71999055852",
-            email: 'Linn@gmail.com',
-            website: 'www.Linn.com.br',
-         },
-      ]
-      }
-   
+export const clientes: cliente[] = [
+	{
+		userId: "1",
+		CPF: "013.117.115-57",
+		nome: "Mr. Astrobot",
+		nascimento: "20/07/1987",
+		saldo: 100,
+		extrato: [
+			{
+				data: "22/01/2022",
+				descricao: "alimentacao",
+				debido: 50,
+			},
+			{
+				data: "23/02/2022",
+				descricao: "aluguel",
+				debido: 50,
+			}
+		]
+	},
+	{
+		userId: "2",
+		CPF: "011.117.115-57",
+		nome: "Mr. AstroMath",
+		nascimento: "10/07/1987",
+		saldo: 150,
+		extrato: [
+			{
+				data: "10/01/2022",
+				descricao: "combustivel",
+				debido: 150,
+			},
+			{
+				data: "12/02/2022",
+				descricao: "lazer",
+				debido: 50,
+			}
+		]
+	},
 ]
