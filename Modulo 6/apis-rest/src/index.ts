@@ -88,7 +88,7 @@ console.log(users)
 				response.status(Erros.DESCRICAO_NOT_FOUND.status).send(Erros.DESCRICAO_NOT_FOUND.message)
 				break
 			case Erros.AGE_NOT_FOUND.message:
-				response.status(Erros.PRECO_NOT_FOUND.status).send(Erros.PRECO_NOT_FOUND.message)
+				response.status(Erros.AGE_NOT_FOUND.status).send(Erros.AGE_NOT_FOUND.message)
 				break
 			default:
 				response.status(Erros.SOMETHING_WENT_WRONG.status).send(Erros.SOMETHING_WENT_WRONG.message)
@@ -97,86 +97,6 @@ console.log(users)
 	}
 	response.status(201).send(users)
 })
-// app.get("/consulta", (request: Request, response: Response) => {
-// 	response.status(201).send(produtos)
-// })
-// app.put("/cadastro/:id", (request: Request, response: Response) => {
-// 	try{
-// 	// const preco = request.body.preco
-// 	let atualizaPreco = produtos.find((preco: any) => {
-// 		return preco.id == request.params.id
-// 	})
-// 	if (!atualizaPreco) {
-// 		response.status(404).send("")
-// 		return
-// 	}
-
-// 	if (!request.body.preco) {
-// 		throw new Error(Erros.MISSING_PARAMETERS.message)
-// 	}
-
-// 	if (typeof request.body.preco !== 'number') {
-// 		throw new Error(Erros.PRECO_NOT_FOUND.message)
-// 	}
-// 	if (request.body.preco < 0) {
-// 		throw new Error(Erros.PRECO_IS_ZERO.message)
-// 	}
-
-// 	atualizaPreco.preco = request.body.preco
-// } catch (error: any) {
-// 	switch (error.message) {
-// 		case Erros.MISSING_PARAMETERS.message:
-// 			response.status(Erros.MISSING_PARAMETERS.status).send(Erros.MISSING_PARAMETERS.message)
-// 			break
-// 		case Erros.PRECO_NOT_FOUND.message:
-// 			response.status(Erros.PRECO_NOT_FOUND.status).send(Erros.PRECO_NOT_FOUND.message)
-// 			break
-// 		case Erros.PRECO_IS_ZERO.message:
-// 			response.status(Erros.PRECO_IS_ZERO.status).send(Erros.PRECO_IS_ZERO.message)
-// 			break
-// 		default:
-// 			response.status(Erros.SOMETHING_WENT_WRONG.status).send(Erros.SOMETHING_WENT_WRONG.message)
-
-// 	}}
-// 	response.status(201).send(produtos)
-// })
-
-// app.delete("/cadastro/:id", (request: Request, response: Response) => {
-
-// 	try{
-// 	// let  atualizaPreco = produtos.find((preco:any) =>{
-// 	// 	return preco.id == request.params.id
-// 	// })
-
-// 	// if (!atualizaPreco) {
-// 	// 		response.status(404).send("")
-// 	// 		return
-// 	// 	}
-
-// 	let atualizaId = request.params.id
-// 	const produtoId = produtos.find(produto => produto.id === atualizaId);
-// 	if(!produtoId) {
-// 		throw new Error(Erros.MISSING_PARAMETERS.message) 
-// 	}
-
-// 	let atualizaPreco = produtos.findIndex((produto: any) => {
-// 		return produto.id == atualizaId
-// 	})
-// 	produtos.splice(atualizaPreco, 1)
-// } catch (error: any) {
-// 	switch (error.message) {
-// 		case Erros.MISSING_PARAMETERS.message:
-// 			response.status(Erros.MISSING_PARAMETERS.status).send(Erros.MISSING_PARAMETERS.message)
-// 			break
-// 		default:
-// 			response.status(Erros.SOMETHING_WENT_WRONG.status).send(Erros.SOMETHING_WENT_WRONG.message)
-
-// 	}
-// }
-
-// 	response.status(201).send(produtos)
-// })
-
 app.listen(3000, () => {
 	console.log("Sistem Online... OK")
 })
