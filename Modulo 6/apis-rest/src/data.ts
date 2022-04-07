@@ -1,26 +1,58 @@
 
-type produto = {
-	id: string,
-	descricao: string,
-	preco: number,
+type user = {
+    id: number,
+    name: string,
+    email: string,
+    type: UserType,
+    age: number
 }
 
+enum UserType {
+    ADMIN = "ADMIN",
+    NORMAL = "NORMAL"
+}
 
-export const produtos:produto[] =  [
-{
-    id:"001",
-    descricao:"Carne",
-    preco:58.00
-},
-{
-    id:"002",
-    descricao:"Frango",
-    preco:12.00
-},
-{
-    id:"003",
-    descricao:"Peixe",
-    preco:38.00
-},
-
-]
+ export let users:user[] = [
+        {
+            id: 1,
+            name: "Alice",
+            email: "alice@email.com",
+            type: UserType.ADMIN,
+            age: 12
+        },
+        {
+            id: 2,
+            name: "Bob",
+            email: "bob@email.com",
+            type: UserType.NORMAL,
+            age: 36
+        },
+        {
+            id: 3,
+            name: "Coragem",
+            email: "coragem@email.com",
+            type: UserType.NORMAL,
+            age: 21
+        },
+        {
+            id: 4,
+            name: "Dory",
+            email: "dory@email.com",
+            type: UserType.NORMAL,
+            age: 17
+        },
+        {
+            id: 5,
+            name: "Elsa",
+            email: "elsa@email.com",
+            type: UserType.ADMIN,
+            age: 17
+        },
+        {
+            id: 6,
+            name: "Fred",
+            email: "fred@email.com",
+            type: UserType.ADMIN,
+            age: 60
+        }
+    ]

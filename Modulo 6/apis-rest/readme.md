@@ -1,20 +1,21 @@
 
-# API CADASTRA PRODUTO
+# API CADASTRA USUARIOS
 
-## Esta API Tem o intuito de facilitar a vida de quem procura e necessita pegar dados e informações sobre pokemons
+## Esta API Tem o intuito de facilitar o cadastro de usuarios
 
 ### Link da Documentação
 
-#### [CRUD-PRODUTO-API](https://documenter.getpostman.com/view/15418246/UVyxPCwF)
+#### [CR-USUARIOS-API](https://documenter.getpostman.com/view/15418246/UVyxPDAW)
 
 ##
 
 ### O que Funciona 
 
-##### Endpoints GET(getAllokemons, getAllPokemonsByName), POST(addNewPokemons)
+##### Endpoints GET(/user/:name, allusers), POST(cadastro)
 
 ### O que Não Funciona
 
+#### Delete e Atualizar
 
 ##
 
