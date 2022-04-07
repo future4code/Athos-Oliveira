@@ -1,4 +1,3 @@
-Link para documentação https://documenter.getpostman.com/view/15418246/UVyxPCwD
 
 # API SISTEMA BANCARIO
 
