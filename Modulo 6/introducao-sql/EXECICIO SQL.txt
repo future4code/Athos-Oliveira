@@ -1,0 +1,67 @@
+CREATE TABLE Actor (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR (255) NOT NULL,
+    salary FLOAT NOT NULL,
+    birth_date DATE NOT NULL,
+    gender VARCHAR(6) NOT NULL
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "001", 
+  "Tony Ramos",
+  400000,
+  "1948-08-25", 
+  "male"
+);
+
+Varchar cria uma variavel que recebe (n) caracteres
+fleate valores fracionaveis
+data é data time
+not null nao pode ser nulo
+
+describe mostra as configuraçoes da tabela exeto seu conteudo
+
+
+2) chave primaria duplicada, o sistema por padrao nao permite valores identicos de chave primaria.
+
+3)
+SELECT * from Actor WHERE gender = "female"
+SELECT salary from Actor WHERE name = "Tony Ramos"
+SELECT * from Actor WHERE gender is null
+SELECT id, name, salary from Actor WHERE salary > 500000
+SELECT id, name from Actor WHERE id = "002"
+4)
+SELECT * FROM Actor WHERE (name NOT LIKE "%A%" ) AND salary > 350000
+SELECT * FROM Actor WHERE (name LIKE "%g%" ) OR (name LIKE "%G%");
+
+SELECT * FROM Actor WHERE (name LIKE "%a%"  OR name LIKE "%A%"
+OR name LIKE "%g%"  OR name LIKE "%G%") AND salary BETWEEN 300000 and 300000
+5)
+CREATE TABLE Filmes(
+    id INT PRIMARY KEY,
+    titulo VARCHAR (255) NOT NULL,
+    sinopse Text ,
+    date_lancamento DATE NOT NULL,
+    avaliacao FLOAT NOT NULL
+);
+
+INSERT INTO filmes (id, titulo, sinopse, data_lancamento, avaliacao)
+VALUES(
+  004, 
+  "Dona Florinda e Seus Dois Madrugas",
+  "Dona Florinda é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+  "2017-11-02", 
+  8
+);
+
+6)
+
+select id, titulo, avaliacao from filmes where id = 002
+select * from filmes where titulo = "o senhor dos aneis"
+select id , titulo, sinopse from filmes where avaliacao > 8
+7)
+select id , titulo, sinopse from filmes where titulo LIKE "%doce%"
+select id , titulo, sinopse from filmes where sinopse LIKE "%anel%" OR titulo LIKE "%doce%"
+SELECT * FROM filmes WHERE data_lancamento < "2017-05-04";
+select id , titulo, sinopse, avaliacao from filmes where (sinopse LIKE "%anel%" OR titulo LIKE "%doce%") and avaliacao > 9.5
+SELECT * FROM filmes WHERE data_lancamento < CURDATE() and (sinopse LIKE "%anel%" OR titulo LIKE "%doce%") and avaliacao > 9.5
