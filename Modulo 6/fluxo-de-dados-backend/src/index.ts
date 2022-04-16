@@ -119,18 +119,6 @@ app.put("/cadastro/:id", (request: Request, response: Response) => {
 app.delete("/cadastro/:id", (request: Request, response: Response) => {
 
 	try{
-	// let  atualizaPreco = produtos.find((preco:any) =>{
-	// 	return preco.id == request.params.id
-	// })
-
-	// if (!atualizaPreco) {
-	// 		response.status(404).send("")
-	// 		return
-	// 	}
-	//gabiarra
-	// atualizaPreco.id = request.body.id
-	// atualizaPreco.descricao = request.body.descricao
-	// atualizaPreco.preco = request.body.preco
 	let atualizaId = request.params.id
 	const produtoId = produtos.find(produto => produto.id === atualizaId);
 	if(!produtoId) {
