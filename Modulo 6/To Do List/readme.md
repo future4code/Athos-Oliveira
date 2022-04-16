@@ -11,7 +11,7 @@
 
 ### O que Funciona 
 
-##### Endpoints GET(XXX, ), POST(XXX), PUT(XXX)
+##### Endpoints GET(/user/all, /user/:id ), POST(user), PUT(user/:id), DELETE(user/:id)
 
 ### O que Não Funciona
 
