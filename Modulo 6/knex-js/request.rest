@@ -7,23 +7,18 @@
 // Authorization: "token"
 
 
-###  // endpoint criar ator
-POST http://localhost:3003/actor
-Content-Type: application/json 
-
-{
- "name": "",
- "salary": 50,
- "birthDate": "1989-05-20",
- "gender": "male"   
-}
-
 ###  // endpoint buscar atores
-GET http://localhost:3003/Users/005
+get http://localhost:3003/Users/005
 ####
 GET http://localhost:3003/Users/Kenny
 ####
-
+get http://localhost:3003/Users?gender=female
+####
+get http://localhost:3003/Users/search?gender=female
+####
+get http://localhost:3003/Users/nomes?name=Kenny
+####
+get http://localhost:3003/Users
 
 ###  // endpoint editar ator
 PUT http://localhost:3003/Users/Fernanda
