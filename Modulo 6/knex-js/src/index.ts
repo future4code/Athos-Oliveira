@@ -30,7 +30,7 @@ const getActorById = async (id: string): Promise<any> => {
 	const count = result[0][0].count;
 	return count;
   };
-//execicio 1
+//EXECICIO 1 A
 app.get("/users/:id", async (req: Request, res: Response): Promise<void> => {
 	try {
 	  const id = req.params.id
@@ -43,7 +43,7 @@ app.get("/users/:id", async (req: Request, res: Response): Promise<void> => {
 	  res.status(500).send("Unexpected error")
 	}
   }) 
-//execicio 2
+//EXECICIO 1 B
   app.get("/Users", async (req: Request, res: Response): Promise<void> => {
 	try {
 	  const genders = req.query.gender
@@ -61,7 +61,7 @@ app.get("/users/:id", async (req: Request, res: Response): Promise<void> => {
 	  res.status(500).send("Unexpected error")
 	}
   })
-  //execicio
+  //EXECICIO 1 C
   app.get("/Users", async (req: Request, res: Response): Promise<void> => {
 	try {
 	  const nome = req.query.name
@@ -77,7 +77,7 @@ app.get("/users/:id", async (req: Request, res: Response): Promise<void> => {
 	  res.status(500).send("Unexpected error")
 	}
   })  
-
+// EXECICIO 2
 
 
 
