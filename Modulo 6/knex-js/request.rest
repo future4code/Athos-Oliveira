@@ -1,0 +1,38 @@
+// Para requisições com body:
+// Content-Type: application/json 
+// Pule 1 linha
+// {}
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+
+###  // endpoint criar ator
+POST http://localhost:3003/actor
+Content-Type: application/json 
+
+{
+ "name": "",
+ "salary": 50,
+ "birthDate": "1989-05-20",
+ "gender": "male"   
+}
+
+###  // endpoint buscar atores
+GET http://localhost:3003/Users/005
+####
+GET http://localhost:3003/Users/Kenny
+####
+
+
+###  // endpoint editar ator
+PUT http://localhost:3003/Users/Fernanda
+Content-Type: application/json 
+
+{
+ "salary": 5000000000
+}
+
+###  // endpoint deletar ator
+DELETE http://localhost:3003/User/003
+
