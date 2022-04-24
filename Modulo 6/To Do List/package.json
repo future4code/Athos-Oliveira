@@ -1,6 +1,6 @@
 {
-  "name": "aula-knex",
-  "version": "1.0.0",
+  "name": "lista-to-do",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./src/index.ts",
