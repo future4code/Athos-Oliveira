@@ -193,19 +193,19 @@ const transformaData =(data:any)=>{
 	
 
 //Criar tarefa
-app.post("/task/add", async(req:Request, res:Response)=>{
+app.post("/task/add", async(req:Request, res:Response):Promise<void>=>{
     try{
      const {title, description ,limitDate,creatorUserId,creatorUserNickname,status} = req.body
 	 const dataConvert = transformaData(limitDate)
-	// if (!title || !description ||!creatorUserId ) {
-	// 	throw new Error(Erros.MISSING_PARAMETERS.message)
-	// }
-    // if ( title == null) {
-    //     throw new Error(Erros.DESCRICAO_NOT_FOUND.message)
-    // }
-	// if ( description == null) {
-    //     throw new Error(Erros.DESCRICAO_NOT_FOUND.message)
-    // }
+	if (!title || !description ||!creatorUserId ) {
+		throw new Error(Erros.MISSING_PARAMETERS.message)
+	}
+    if ( title == null) {
+        throw new Error(Erros.DESCRICAO_NOT_FOUND.message)
+    }
+	if ( description == null) {
+        throw new Error(Erros.DESCRICAO_NOT_FOUND.message)
+    }
 
 	await connection("Tasks").insert({
         taskId: generateId(),
@@ -409,15 +409,12 @@ app.get("/tasks", async(req: Request, res: Response) => {
 	}
 })
 //Pegar todas as tarefas atrasadas
-app.get("/task/delayed", async(req: Request, res: Response) => {
-    try{
-	const data = Date.now()
-	const [result] = await connection("Tasks").select().where({'limitDate', '>', 'data'})
-		  
-	  
 
-	res.status(200)
-	res.send({Tasks:result})
+app.get("/task/delayed", async(req: Request, res: Response):Promise<any> => {
+	try{
+	const res1=await connection("Tasks").select().where('limitDate', '<=', `current_date()`)
+	res.status(202)
+	 res.send({Tasks:res1})
  } catch(error:any){
 		switch (error.message) {
 			case Erros.ID_NOT_FOUND.message:
