@@ -1,6 +1,6 @@
 {
-  "name": "lista-to-do",
-  "version": "1.0.1",
+  "name": "Labecomerce",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./src/index.ts",
