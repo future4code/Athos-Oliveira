@@ -12,11 +12,9 @@ export async function postPurchases(
     let user_id = req.body.user_id
     let quantity:number = req.body.quantity
 
-  const [prices] = await connection("labecommerce_products").select().where( {id: req.body.product_id });
-  let total = prices.price*req.body.quantity
+  const [product] = await connection("labecommerce_products").select().where( {id: req.body.product_id });
+  let total = product.price*req.body.quantity
 
-
- console.log(total)
   const result  =	await connection("labecommerce_purchases").insert({
              id: generateId(),
              user_id:user_id,

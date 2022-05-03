@@ -1,51 +1,48 @@
-CREATE TABLE Users (
+CREATE TABLE labecommerce_users (
     id VARCHAR(255) PRIMARY KEY,
     name VARCHAR (255) NOT NULL,
-    nickname varchar(255)NOT NULL,
-    email VARCHAR(255) NOT NULL
+    email VARCHAR(255) NOT NULL,
+    password varchar(255)NOT NULL
+    
 );
-INSERT INTO Users (id, name, email, nickname)
+INSERT INTO labecommerce_users (id, name, email, password)
 VALUES(
   "005", 
-  "Buttles",
-  "Buttles@hotmail.com",
-  "Buttles"
-);
-select * from Users;
-CREATE TABLE Tasks (
-    taskId VARCHAR(255) PRIMARY KEY,
-    title VARCHAR (255) NOT NULL,
-    description VARCHAR (255) NOT NULL,
-    limitDate DATE NOT NULL,
-    status varchar (255) not null,
-    creatorUserId VARCHAR(255) ,    
-    creatorUserNickname VARCHAR(255),
-    FOREIGN KEY (creatorUserId) REFERENCES Users(id)
- 
+  "KENNY",
+  "KENNY@hotmail.com",
+  "119G9GEC"
 );
 
-INSERT INTO Tasks (taskId, title, description, limitDate,status,creatorUserId,creatorUserNickname)
+CREATE TABLE labecommerce_products (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR (255) NOT NULL,
+    price FLOAT NOT NULL,
+    image_url varchar(255)NOT NULL
+    
+);
+select * from labecommerce_users;
+select * from labecommerce_products;
+update labecommerce_products set name ="Fosforos" where  id = "002";
+INSERT INTO labecommerce_products (id, name, price, image_url)
 VALUES(
-  "007", 
-  "go scholl",
-  " go scholl  ",
-"2022-08-25",
-  "done",
-  "005",
-  "Buttles"
+  "005", 
+  "Biscoito",
+  "4.00",
+  "https://a-static.mlcdn.com.br/1500x1500/biscoito-maisena-bauducco-170g/magazineluiza/225337300/7848919852b8fc2cc34ddac9ceb1c7a7.jpg"
 );
-select * from Tasks;
-select * from Tasks where limitDate < current_date();
-update Tasks set creatorUserNickname ="Orange" where  creatorUserId = "001";
-
-CREATE TABLE ResponsibleUsers (
-    idTaskId VARCHAR(255) PRIMARY KEY,
-    userId VARCHAR (255) NOT NULL,
-    FOREIGN KEY (idTaskId) REFERENCES Tasks(taskId),
-    FOREIGN KEY (userId) REFERENCES Users(id)
+select * from labecommerce_purchases;
+CREATE TABLE labecommerce_purchases (
+    id VARCHAR(255) PRIMARY KEY,
+    user_id VARCHAR (255),  FOREIGN KEY (user_id) REFERENCES labecommerce_users(id),
+    product_id VARCHAR (255),  FOREIGN KEY (product_id) REFERENCES labecommerce_products(id),
+    quantity FLOAT NOT NULL,
+    total_price FLOAT NOT NULL
 );
-select * from ResponsibleUsers;
-INSERT INTO ResponsibleUsers (idTaskId, userId)VALUES("001", "001");
-
-
-
+INSERT INTO labecommerce_purchases (id,  user_id, product_id, quantity,total_price)
+VALUES(
+  "001", 
+  "001",
+  "001",
+  "5",
+  "75"
+);
