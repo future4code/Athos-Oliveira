@@ -13,7 +13,7 @@ ALTER TABLE Actor CHANGE gender gender VARCHAR(255);
 ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
 -- execicio 2 
 ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
-update Actor set name ="JULIANA PAES" where name LIKE "%Juliana Paes%";
+    update Actor set name ="JULIANA PAES" where name LIKE "%Juliana Paes%";
 update Actor set name ="Juliana Paes" where name LIKE "%JULIANA PAES%";
 update Actor set name ="Wendy", birth_date ="1999.07.01",salary="400",gender="Kid" where id ="005";
 -- execicio 3
