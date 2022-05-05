@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from "cors";
 import { AddressInfo } from "net";
+import connection from "./connection";
 import { baseDeDados } from './data';
 import { v4 as generateId } from 'uuid';
 import connection from "./connection";
