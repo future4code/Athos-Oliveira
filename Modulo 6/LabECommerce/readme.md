@@ -1,20 +1,19 @@
 
-# API SISTEMA LISTA DE TAREFAS
+# API SISTEMA LABECOMERCE
 
-## Esta API Tem o intuito de Criar tarefas,
+## Esta API Tem o intuito de Adicionar usuarios, produtos, compras e mostrar todas as compras dos usuarios.
 
 ### Link da Documentação
-
-#### [API SISTEMA LISTA DE TAREFAS](https://documenter.getpostman.com/view/15418246/UyrBiG59)
+#### [API SISTEMA LABECOMERCE](https://documenter.getpostman.com/view/15418246/UyxbsAPZ)
 
 ##
 
 ### O que Funciona 
 
-##### Endpoints GET(/users/all, /tasks/all, /users/:id, /users, /task/:id, /tasks/:id", /task, /task/:id/responsible, /tasks ), POST(/users/add, /task/add, /task/responsible), PUT(/users/edit/:id, /task/status/:id ), DELETE(/users/:id, /task/:id, /task/:taskId/responsible/:responsibleUserId )
+##### Endpoints GET(/users, /products, /purchases, /users/:user_id/purchases), POST(/users, /products, /purchases)
 
 ### O que Não Funciona
-##### Endpoints GET(/task/delayed, /tasks/search ), POST(/task/responsibles)
+
 
 ##
 
