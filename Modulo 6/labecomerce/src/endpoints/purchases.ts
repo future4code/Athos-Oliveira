@@ -12,18 +12,6 @@ export async function postPurchases(
     let user_id = req.body.user_id
     let quantity:number = req.body.quantity
 
-  	if (!product_id || !user_id  || !quantity ) {
-      throw new Error("Alguma informação faltando")
-    }
-      if (typeof product_id !== 'string') {
-          throw new Error("O id do produto  deve conter aspas duplas")
-      }
-      if (typeof user_id !== 'string') {
-        throw new Error("O id do usuario  deve conter aspas duplas")
-    }
-    if (typeof quantity !== 'number') {
-      throw new Error("A quantidade deve ser valor Numerico")
-  }
   const [product] = await connection("labecommerce_products").select().where( {id: req.body.product_id });
   let total = product.price*req.body.quantity
 
