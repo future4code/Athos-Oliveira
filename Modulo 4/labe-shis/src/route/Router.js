@@ -36,7 +36,7 @@ export const Router = () => {
           <CreateTripPage />
         </Route>
 
-        <Route exact path={"/tripdetails"}>
+        <Route exact path={"/tripdetails/:id"}>
           <TripDetailsPage />
         </Route>
       </Switch>
