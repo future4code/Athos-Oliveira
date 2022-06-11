@@ -12,7 +12,7 @@ export class UserDatabase extends BaseDatabase {
             name: user.name,
             email: user.email,
             password: user.password
-         }).into('Labook_User')
+         }).into('Architecture_User')
          
       } catch (error:any) {
          throw new Error(error.message)

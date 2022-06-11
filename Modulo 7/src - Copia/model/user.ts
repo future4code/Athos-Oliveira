@@ -5,7 +5,3 @@ export type user = {
    password: string
 }
 
-export type friend = {
-   id: string,
-   friendId:string
-}
