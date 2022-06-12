@@ -2,6 +2,7 @@ import { generateId } from "../services/generateID";
 import { PostDatabase } from "../data/PostDatabase";
 import {post, postInputDTO} from "../model/post"
 import { CustonError } from "../error/custonError";
+import * as postDatabase from '../data/PostDatabase'
 
 
 export class PostBusiness {
@@ -15,15 +16,7 @@ public createPost = async (input: postInputDTO) => {
          'Preencha os campos "photo","description", "type" , "createdAt"e authorId' 
        );
      }
-    //  if(title.length <3){
-    //    throw new InvalidName()
-    //  }
-    //  if(!deadline.includes("@")){
-    //   throw new InvalidEmail()
-    // }
- 
      const id: string = generateId();
- 
      const postDatabase = new PostDatabase();
     const post:post = {
       id,
@@ -46,6 +39,16 @@ public createPost = async (input: postInputDTO) => {
      throw new Error(error.message);
    }
  };
+ public getPost = async (post:post) => {
+  try {
+
+      return await new PostDatabase().getAllPost(post);
+  
+   
+  } catch (error: any) {
+    throw new Error(error.message);
+  }
+}
 
 }
 

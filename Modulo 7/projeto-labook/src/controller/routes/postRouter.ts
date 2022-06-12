@@ -4,4 +4,5 @@ import { PostController } from "../postController"
 export const postRouter = express.Router()
 const postController = new PostController()
 
-postRouter.post('/create', postController.createPost)
+postRouter.post('/post', postController.createPost)
+postRouter.get('/all', postController.getAllPost)

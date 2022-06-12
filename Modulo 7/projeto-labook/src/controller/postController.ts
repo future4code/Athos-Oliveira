@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { PostBusiness } from "../business/PostBusiness";
 import {post, postInputDTO} from "../model/post"
 
+
 export class PostController {
 
   public createPost = async (
@@ -27,8 +28,22 @@ export class PostController {
          res.status(400).send(error.message)
       }
    }
+public getAllPost = async (
+      req: Request,
+      res: Response,post:any
+   ) => {
+      try {
 
+         const posts = await new PostBusiness().getPost(post);
+
+         res.send(posts).status(200);
+
+     } catch (error:any) {
+         res.send({ message: error.message }).status(error.status);
+     }
+ }
+   }
    
    
 
-}
+

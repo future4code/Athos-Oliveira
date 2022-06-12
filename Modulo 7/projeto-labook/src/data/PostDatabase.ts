@@ -22,7 +22,22 @@ export class PostDatabase extends BaseDatabase {
       }
    
    }
+   public getAllPost = async(
+      post: post
+   ) => {
+      try {
+
+         const result = await PostDatabase.connection()
+             .select("*").from('Labook_Post');
+
+         return result;
+
+     } catch (error:any) {
+         throw new Error(error.sqlMessage || error.message);
+     }
+ }
+   
+   }
 
 
-}
 

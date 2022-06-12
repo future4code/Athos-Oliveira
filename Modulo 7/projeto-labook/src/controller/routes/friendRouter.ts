@@ -4,4 +4,4 @@ import { FriendController } from "../FriendController"
 export const friendRouter = express.Router()
 const friendController = new FriendController()
 
-friendRouter.post('/create', friendController.createFriend)
+friendRouter.post('/friend', friendController.createFriend)

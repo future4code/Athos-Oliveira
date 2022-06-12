@@ -4,9 +4,10 @@ import  {postRouter}from"./controller/routes/postRouter"
 import  {friendRouter}from"./controller/routes/friendRouter"
 
 
-app.use('/user', userRouter)
-app.use('/post', postRouter)
-app.use('/friend', friendRouter)
+app.post('/user', userRouter)
+app.post('/post', postRouter)
+app.post('/friend', friendRouter)
+app.get('/all', postRouter)
 
 
 

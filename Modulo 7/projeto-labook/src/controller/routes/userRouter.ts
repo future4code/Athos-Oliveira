@@ -4,4 +4,4 @@ import { UserController } from "../UserController"
 export const userRouter = express.Router()
 const userController = new UserController()
 
-userRouter.post('/create', userController.createUser)
+userRouter.post('/user', userController.createUser)
