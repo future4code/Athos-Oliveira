@@ -49,6 +49,16 @@ public createPost = async (input: postInputDTO) => {
     throw new Error(error.message);
   }
 }
+public getOnePost = async (post:post) => {
+  try {
+
+      return await new PostDatabase().getOnePost(post);
+  
+   
+  } catch (error: any) {
+    throw new Error(error.message);
+  }
+}
 
 }
 

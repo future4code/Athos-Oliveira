@@ -1,4 +1,4 @@
-// import { generateId } from "../services/generateID";
+import {friend} from "../model/user"
 import { FriendDatabase } from "../data/FriendDatabase";
 
 
@@ -7,23 +7,29 @@ public createFriend = async (input: any) => {
    try {
      const { id, friendId } = input;
  
-     if (!id  || !friendId ) {
+     if ( !friendId ) {
        throw new Error(
-         'Preencha os campos "o id do amigo e Sua id"'
+         'Preencha os campos "o id do amigo "'
        );
      }
  
-    //  const id: string = generateId();
  
      const friendDatabase = new FriendDatabase();
-     await friendDatabase.insertFriend({
-       id,
-       friendId
-     });
+     await friendDatabase.insertFriend({id,friendId});
+
    } catch (error: any) {
      throw new Error(error.message);
    }
- };
-
+ }
+ public removeFriend = async (friend:friend) => {
+  try {
+      
+      return await new FriendDatabase().removeFriend(friend);
+  
+   
+  } catch (error: any) {
+    throw new Error(error.message);
+  }
+}
 }
 

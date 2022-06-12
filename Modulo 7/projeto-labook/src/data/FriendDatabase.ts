@@ -7,9 +7,10 @@ export class FriendDatabase extends BaseDatabase {
       friend: friend
    ) => {
       try {
+    
          await FriendDatabase.connection.insert({
-            id: friend.id,
-            friendId: friend.friendId,
+            user_id: friend.id,
+            FriendId: friend.friendId,
           
          }).into('Labook_UserFriend_relation')
          
@@ -19,6 +20,18 @@ export class FriendDatabase extends BaseDatabase {
    
    }
 
+public removeFriend = async(
+   input:friend
+) => {
+   try {
+      
+      const result = await FriendDatabase.connection()
+          .delete().where({ FriendId: input.friendId}).andWhere ({ user_id: input.id}).from('Labook_UserFriend_relation');
 
+      return result;
+
+  } catch (error:any) {
+      throw new Error(error.sqlMessage || error.message);
+  }
 }
-
+}

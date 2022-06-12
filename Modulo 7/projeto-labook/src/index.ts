@@ -6,8 +6,10 @@ import  {friendRouter}from"./controller/routes/friendRouter"
 
 app.post('/user', userRouter)
 app.post('/post', postRouter)
-app.post('/friend', friendRouter)
 app.get('/all', postRouter)
+app.get('/post/:id', postRouter)
+app.post('/friend', friendRouter)
+app.delete('/friend/:id', friendRouter)
 
 
 

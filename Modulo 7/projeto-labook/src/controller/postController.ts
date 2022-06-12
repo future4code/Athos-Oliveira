@@ -42,6 +42,24 @@ public getAllPost = async (
          res.send({ message: error.message }).status(error.status);
      }
  }
+ public getOnePost = async (
+   req: Request,
+   res: Response,post:any
+) => {
+   try {
+      const input = {
+         id: req.params.id
+     }
+     post = input
+  
+      const posts = await new PostBusiness().getOnePost(post);
+
+      res.send(posts).status(200);
+
+  } catch (error:any) {
+      res.send({ message: error.message }).status(error.status);
+  }
+}
    }
    
    

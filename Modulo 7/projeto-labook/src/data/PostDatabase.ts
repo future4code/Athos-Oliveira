@@ -36,8 +36,22 @@ export class PostDatabase extends BaseDatabase {
          throw new Error(error.sqlMessage || error.message);
      }
  }
+ public getOnePost = async(
+   post: post
+) => {
+   try {
+
+      const result = await PostDatabase.connection()
+          .select("*").where({ id: post.id }).from('Labook_Post');
+
+      return result;
+
+  } catch (error:any) {
+      throw new Error(error.sqlMessage || error.message);
+  }
+}
    
-   }
+}
 
 
 
