@@ -3,6 +3,20 @@ import { EditUserInput, user } from "../model/user";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserDatabase extends BaseDatabase {
+  public findUser = async (email: string) => {
+    try {
+  
+      const result = await UserDatabase.connection("Auth_users")
+        .select()
+        .where({email});
+
+      
+      return result[0];
+    } catch (error: any) {
+      throw new CustomError(400, error.message);
+    }
+  };
+
   public insertUser = async (user: user) => {
     try {
       await UserDatabase.connection
@@ -29,4 +43,6 @@ export class UserDatabase extends BaseDatabase {
       throw new CustomError(400, error.message);
     }
   };
+
+ 
 }

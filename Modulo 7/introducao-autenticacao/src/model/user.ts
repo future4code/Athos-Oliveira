@@ -13,14 +13,24 @@ export interface UserInputDTO {
    password: string
 }
 
+export interface LoginInputDTO {
+   email: string,
+   password: string
+}
+
 export interface EditUserInputDTO {
    name: string,
    nickname: string,
-   id: string
+   id: string,
+   token: string
 }
 
 export interface EditUserInput {
    name: string,
    nickname: string,
+   id: string
+}
+
+export interface AuthenticationData {
    id: string
 }
