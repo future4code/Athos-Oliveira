@@ -1,9 +1,9 @@
-import { generateId } from "../services/generateID";
+import { generateId } from "../services/generateId";
 import { RecipeDatabase } from "../data/recipeDatabase";
 import {recipe, recipeInputDTO} from "../model/recipe"
-import { CustonError } from "../data/error/custonError";
-import * as postDatabase from '../data/recipeDatabase'
+import {  CustomError, InvalidEmail, InvalidName, InvalidPassword } from "../data/error/custonError";
 
+const idGenerator = new generateId()
 
 export class RecipeBusiness {
 public createRecipe = async (input: recipeInputDTO) => {
@@ -12,10 +12,10 @@ public createRecipe = async (input: recipeInputDTO) => {
      
 
      if (!title || !description  || !data||!authorId) {
-       throw new CustonError(400,
+       throw new CustomError(400,
          'Preencha os campos "title","description" , "Data" e "id"');
      }
-     const id: string = generateId();
+     const id: string = idGenerator.generateId()
      const recipeDatabase = new RecipeDatabase();
     const recipe:recipe = {
       id,

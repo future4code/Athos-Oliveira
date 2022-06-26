@@ -10,12 +10,10 @@ app.post('/login', loginRouter)
 app.get('/user/profile', signupRouter)
 app.get('/user/:id', signupRouter)
 app.delete('/user/:id', signupRouter)
-
 app.post('/recipe', recipeRouter)
 app.get('/recipe', recipeRouter)
 app.get('/recipe/:id', recipeRouter)
 app.delete('/recipe/:id', recipeRouter)
-
 app.post('/user/follow', friendRouter)
 app.delete('/user/unfollow/:id', friendRouter)
 
