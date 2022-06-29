@@ -1,12 +1,12 @@
 
 
 export const isEven = (n: number) => {
-    return n % 2 === 0;
+    return n % 3 ===1;
 }
 
 export const myAsyncFunc = async () => {
-    return 7;
-};
+    return 7
+}
 
 // myAsyncFunc().then(res => console.log(res)); // res é um number
 
