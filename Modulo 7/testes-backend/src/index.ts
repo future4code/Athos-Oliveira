@@ -1,18 +1,37 @@
-import express from "express";
-import {AddressInfo} from "net";
-import { userRouter } from "./router/UserRouter";
+import app from './app';
+import SignUpController from './presentation/signup';
+import { Request, Response, NextFunction } from "express";
+import 'express-async-errors'; // https://www.npmjs.com/package/express-async-errors
 
-const app = express();
+import { UserBusiness } from "./business/user";
+import { IdGenerator } from "./services/id-generator";
+import { TokenGenerator } from "./services/token-generator";
 
-app.use(express.json());
+const idGenerator = new IdGenerator();
+const tokenGenerator = new TokenGenerator();
+const hashGenerator = {
+    hash: async (text: string) => 'hash'
+};
+// se conecta ao banco de dados de verdade
+const userRepository = {
+    createUser: async (user: any) => true
+};
 
-app.use("/users", userRouter);
+const userBusiness = new UserBusiness(
+    idGenerator,
+    hashGenerator,
+    userRepository,
+    tokenGenerator
+);
 
-const server = app.listen(3003, () => {
-  if (server) {
-    const address = server.address() as AddressInfo;
-    console.log(`Servidor rodando em http://localhost:${address.port}`);
-  } else {
-    console.error(`Falha ao rodar o servidor.`);
-  }
-});
+app.post('/user', SignUpController(userBusiness));
+// app.get('/session', LoginController(userBusiness));
+// app.post('/user', SignUpController);
+// app.post('/user', SignUpController);
+// app.post('/user', SignUpController);
+// app.post('/user', SignUpController);
+
+
+app.use((error: any, req: Request, res: Response, next: NextFunction) => {
+    res.status(error.status).send(error.message);
+})
