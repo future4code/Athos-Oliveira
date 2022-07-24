@@ -1,7 +1,7 @@
 import { IdGenerator } from "../services/IdGenerator";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
 import { walking,walkingInputDTO } from "../model/walking";
-import {  CustomError, InvalidEmail, InvalidName, InvalidPassword } from "../error/customError";
+import {  CustomError } from "../error/customError";
 
 const idGenerator = new IdGenerator()
 
