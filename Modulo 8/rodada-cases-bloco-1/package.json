@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && node --inspect ./build/index.js",
     "dev": "tsnd --transpile-only --ignore-watch node_modules ./src/index.ts",
-    "test": "ts-node-dev ./src/services/Authenticator.ts"
+    "test": "jest"
   },
   "keywords": [
     "api"

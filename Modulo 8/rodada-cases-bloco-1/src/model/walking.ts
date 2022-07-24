@@ -20,7 +20,7 @@ export type walking = {
     hora_inicio:string,
     hora_termino:string
  }
- enum STATUS_TYPES {
+ export enum STATUS_TYPES {
    PENDENTE = "Pendente",
    PROGRESSO = "Em Andamento",
    DONE = "Concluido",

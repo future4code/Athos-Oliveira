@@ -1,6 +1,6 @@
 import { IdGenerator } from "../services/IdGenerator";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
-import { walking, walkingInputDTO } from "../model/walking";
+import { STATUS_TYPES, walking, walkingInputDTO } from "../model/walking";
 
 
 const idGenerator = new IdGenerator()
@@ -19,7 +19,7 @@ export class DogWalkingBusiness {
         hora_termino } = input;
 
 
-      const calculos = (duracao: any, pets: any) => {
+     const calculos = (duracao: any, pets: any) => {
         if (duracao === "00:30:00") {
           if (pets >= 2) {
             let quant = pets
@@ -44,7 +44,8 @@ export class DogWalkingBusiness {
       }
       const preco: any = calculos(input.duracao, input.pets)
       const id: string = idGenerator.generate()
-      const Status: any = "Pendente"
+      const Status = STATUS_TYPES.PENDENTE
+   
        
 
       const dogWalkingDatabase = new DogWalkingDatabase();
