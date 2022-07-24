@@ -1,7 +1,7 @@
 {
-  "name": "lama-1",
+  "name": "DogHero",
   "version": "1.0.0",
-  "description": "o projeto LAMA",
+  "description": "o projeto DogHero",
   "main": "index.js",
   "scripts": {
     "start": "tsc && node --inspect ./build/index.js",
@@ -9,10 +9,9 @@
     "test": "ts-node-dev ./src/services/Authenticator.ts"
   },
   "keywords": [
-    "api",
-    "lama"
+    "api"
   ],
-  "author": "Athos e Heber",
+  "author": "Athos",
   "license": "ISC",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
