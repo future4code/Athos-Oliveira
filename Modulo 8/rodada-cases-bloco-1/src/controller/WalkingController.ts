@@ -69,6 +69,51 @@ export class WalkingController {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
+   public startWalking = async (
+      req: Request,
+      res: Response
+   ) => {
+      try {
+       const input:any = {
+           id: req.params.id,
+       }
+         const inicio = await new DogWalkingDatabase().startWalking(input);
+         
+         res.send(inicio).status(200);
+      } catch (error:any) {
+         res.send({ message: error.message }).status(error.sqlMessage || error.message);
+     }
+   }
+   public finishWalking = async (
+      req: Request,
+      res: Response
+   ) => {
+      try {
+       const input:any = {
+           id: req.params.id,
+       }
+         const termino = await new DogWalkingDatabase().finishWalking(input);
+         
+         res.send(termino).status(200);
+      } catch (error:any) {
+         res.send({ message: error.message }).status(error.sqlMessage || error.message);
+     }
+   }
+   public allwalking = async (
+      req: Request,
+      res: Response
+   ) => {
+      try {
+       const input:any = {
+           id: req.params.id,
+       }
+         const termino = await new DogWalkingDatabase().allwalking(input);
+         
+         res.send(termino).status(200);
+      } catch (error:any) {
+         res.send({ message: error.message }).status(error.sqlMessage || error.message);
+     }
+   }
    }
    
    

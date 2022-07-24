@@ -41,6 +41,49 @@ export class DogWalkingDatabase extends BaseDatabase {
         throw new Error(error.sqlMessage || error.message);
     }
   }
+  public startWalking = async(
+   walking: walking
+) => {
+  try {
+
+     const result = await this.getConnection()
+         .select("hora_inicio").where({ id: walking.id }).from(DogWalkingDatabase.Dog_Walking);
+
+     return result;
+
+   } catch (error:any) {
+     throw new Error(error.sqlMessage || error.message);
+ }
+}
+public finishWalking = async(
+   walking: walking
+) => {
+  try {
+
+     const result = await this.getConnection()
+         .select("hora_termino").where({ id: walking.id }).from(DogWalkingDatabase.Dog_Walking);
+
+     return result;
+
+   } catch (error:any) {
+     throw new Error(error.sqlMessage || error.message);
+ }
+}
+public allwalking = async(
+   walking: walking
+) => {
+  try {
+   const data = Date.now()
+console.log(data)
+     const result = await this.getConnection()
+         .select("*").where({ id: walking.id }).from(DogWalkingDatabase.Dog_Walking);
+
+     return result;
+
+   } catch (error:any) {
+     throw new Error(error.sqlMessage || error.message);
+ }
+}
 }
 
 

@@ -10,18 +10,6 @@ export class DogWalkingBusiness {
   public createWalking = async (input: walkingInputDTO) => {
     try {
 
-
-      if (input.pets < 1) {
-        throw new InvalidPet();
-      }
-      if (!input.data_agendamento || !input.duracao || !input.latitude || !input.longitude
-        || !input.pets || !input.hora_inicio || !input.hora_termino) {
-        throw new InvalidDados();
-      }
-      if (input.duracao != "00:30:00" && input.duracao != "01:00:00") {
-        throw new InvalidTime()
-      }
-
       const {
         data_agendamento,
         duracao,
@@ -56,10 +44,6 @@ export class DogWalkingBusiness {
         }
       }
       const preco: any = calculos(input.duracao, input.pets)
-
-
-
-
       const id: string = idGenerator.generate()
       const Status: any = "Pendente"
        
@@ -102,9 +86,35 @@ export class DogWalkingBusiness {
       return await new DogWalkingDatabase().showWalking(walking);
 
     } catch (error: any) {
-      throw new Error(error.message);
+      throw new Error(error.sqlMessage || error.message);
     }
   }
+  public startWalking = async (walking: walking) => {
+    try {
 
+      return await new DogWalkingDatabase().startWalking(walking);
+
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
+  public finishWalking = async (walking: walking) => {
+    try {
+
+      return await new DogWalkingDatabase().finishWalking(walking);
+
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
+  public allwalking = async (walking: walking) => {
+    try {
+
+      return await new DogWalkingDatabase().allwalking(walking);
+
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
 }
 

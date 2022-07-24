@@ -8,9 +8,11 @@ app.use(express.json());
 
 
 
-
+app.get("/", walkingRouter)
 app.post("/walking", walkingRouter)
-app.get("/walking/:id", walkingRouter)
+app.get("/show/:id", walkingRouter)
+app.get("/start_walk/:id", walkingRouter)
+app.get("/finish_walk/:id", walkingRouter)
 
 
 
