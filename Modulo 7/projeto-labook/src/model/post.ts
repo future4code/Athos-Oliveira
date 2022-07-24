@@ -20,8 +20,9 @@ type authenticationData = {
    id: string
 }
 
-enum POST_TYPES {
-   NORMAL = "normal",
-   EVENT = "event"
+enum STATUS_TYPES {
+   PENDENTE = "pendente",
+   PROGRESSO = "progresso",
+   DONE = "concluido",
 }
 

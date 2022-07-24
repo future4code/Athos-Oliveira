@@ -9,13 +9,10 @@ export class WalkingController {
   public createWalking = async (
       req: Request,
       res: Response
-   ) => {
+   ):Promise<void> => {
       try {
 
-         if ( req.body.pets.length < 0) {
-            throw new Error("A quantidade deve ser maior que zero");
-          }
-
+      
          const { data_agendamento, 
             duracao, 
             latitude, 
@@ -23,7 +20,8 @@ export class WalkingController {
             pets, 
             hora_inicio,
             hora_termino }= req.body
-   
+         
+
          const input: walkingInputDTO= {
             data_agendamento, 
             duracao, 
@@ -40,7 +38,7 @@ export class WalkingController {
    
          res.status(201).send({ message: "Passeio Adicionada com Sucesso!" })
       } catch (error:any) {
-         res.status(400).send(error.message)
+         res.status(400).send(error.sqlMessage || error.message)
       }
    }
    public showWalking = async (
@@ -55,7 +53,7 @@ export class WalkingController {
          
          res.send(duracao).status(200);
       } catch (error:any) {
-         res.send({ message: error.message }).status(error.status);
+         res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
    }

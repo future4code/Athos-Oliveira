@@ -1,27 +1,27 @@
 export type walking = {
     id: string,
-    status: string,
-    data_agendamento: string,
+    Status:STATUS_TYPES.PENDENTE,
+    data_agendamento: Date,
     preco: number,
     duracao:string,
-    latitude:string,
-    longitude:string,
+    latitude:number,
+    longitude:number,
     pets:number,
     hora_inicio:string,
     hora_termino:string
   
  }
-
- 
- 
  export interface walkingInputDTO  {
-  
-    data_agendamento: string,
+    data_agendamento: Date,
     duracao:string,
-    latitude:string,
-    longitude:string,
+    latitude:number,
+    longitude:number,
     pets:number,
     hora_inicio:string,
     hora_termino:string
  }
- 
+ enum STATUS_TYPES {
+   PENDENTE = "Pendente",
+   PROGRESSO = "Em Andamento",
+   DONE = "Concluido",
+}

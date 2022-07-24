@@ -10,7 +10,7 @@ export class DogWalkingDatabase extends BaseDatabase {
       try {
         await this.getConnection().insert({
             id: walking.id,
-            status :walking.status,
+            status:walking.Status,
             data_agendamento :walking.data_agendamento,
             preco :walking.preco,
             duracao :walking.duracao,
@@ -23,7 +23,7 @@ export class DogWalkingDatabase extends BaseDatabase {
          }).into(DogWalkingDatabase.Dog_Walking);
          
       } catch (error:any) {
-         throw new Error(error.message)
+         throw new Error(error.sqlMessage || error.message)
       }
 
    }
