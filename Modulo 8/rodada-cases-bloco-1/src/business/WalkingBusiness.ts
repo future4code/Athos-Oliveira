@@ -109,7 +109,7 @@ export class DogWalkingBusiness {
   }
   public allwalking = async (walking: walking) => {
     try {
-
+      
       return await new DogWalkingDatabase().allwalking(walking);
 
     } catch (error: any) {

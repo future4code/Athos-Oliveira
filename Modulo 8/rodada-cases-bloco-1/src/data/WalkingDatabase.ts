@@ -1,6 +1,7 @@
 
 import { walking } from "../model/walking";
 import { BaseDatabase } from "./BaseDatabase";
+import { off } from "process";
 
 export class DogWalkingDatabase extends BaseDatabase {
     private static Dog_Walking = "Dog_Walking";
@@ -69,16 +70,40 @@ public finishWalking = async(
      throw new Error(error.sqlMessage || error.message);
  }
 }
-public allwalking = async(
+public allwalking = async(config:any,
    walking: walking
 ) => {
   try {
-   const data = Date.now()
-console.log(data)
-     const result = await this.getConnection()
-         .select("*").where({ id: walking.id }).from(DogWalkingDatabase.Dog_Walking);
+   const data = new Date();
 
+   const dataatual = data.getDate()
+console.log(dataatual)
+     const result = await this.getConnection()
+     .select("*").where({data_agendamento:walking.data_agendamento}).orderBy(config.sort, config.order)
+     .limit(config.size)
+     .offset(config.offset).from(DogWalkingDatabase.Dog_Walking);
      return result;
+
+
+// const dia = new Date();
+// let anoAtual = dia.getFullYear()
+
+// let anoNascimento = nascimento.split("/");
+// let dataNascimento = anoNascimento[2]
+// if (anoAtual - dataNascimento < 18) {
+//    let idade = anoAtual - dataNascimento
+//    console.log(idade)
+//    response.status(404).send(`Sua idade é: ${idade}, Politicas impedem criação de contas para menores de 18 anos`)
+
+
+
+  // const result = await connection("labecommerce_products").select() 
+
+// const [result] = await connection("labecommerce_products")
+//   .select().where("name", "like", `%${search}%`)
+
+
+
 
    } catch (error:any) {
      throw new Error(error.sqlMessage || error.message);

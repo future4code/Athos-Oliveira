@@ -3,6 +3,7 @@ import { DogWalkingBusiness } from "../business/WalkingBusiness";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
 import {walkingInputDTO} from "../model/walking"
 import { InvalidTime,InvalidPet,InvalidDados } from "../error/customError";
+import { Console } from "console";
 
 
 
@@ -106,7 +107,37 @@ export class WalkingController {
       try {
        const input:any = {
            id: req.params.id,
+           search:req.query.search,
+           sort:req.query.sort as string,
+           order:req.query.order as string,
+           page: Number(req.query.page),
+           size:Number(req.query.size),
+          
        }
+
+let offset = input.size*(input.page-1)
+input.offset = offset    
+
+    if(!input.data_agendamento){
+      input.data_agendamento ="%"
+    }
+
+    if(input.sort !== "data_agendamento") {
+      input.sort = "data_agendamento"
+    }
+
+    if( !input.order || input.order.toUpperCase() !== "ASC" && input.order.toUpperCase() !== "DESC" ){
+      input.order = "ASC"
+    }
+
+    if(isNaN(input.page) || input.page < 1) {
+      input.page = 1
+    }
+
+    if(isNaN(input.size) || input.size < 1) {
+      input.size = 10
+    }
+
          const termino = await new DogWalkingDatabase().allwalking(input);
          
          res.send(termino).status(200);
