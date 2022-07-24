@@ -1,7 +1,6 @@
 import { IdGenerator } from "../services/IdGenerator";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
 import { walking, walkingInputDTO } from "../model/walking";
-import { InvalidTime,InvalidPet,InvalidDados } from "../error/customError";
 
 
 const idGenerator = new IdGenerator()
@@ -109,7 +108,7 @@ export class DogWalkingBusiness {
   }
   public allwalking = async (walking: walking) => {
     try {
-      
+
       return await new DogWalkingDatabase().allwalking(walking);
 
     } catch (error: any) {

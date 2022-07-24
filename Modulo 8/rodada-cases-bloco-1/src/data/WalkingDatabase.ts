@@ -1,7 +1,7 @@
 
 import { walking } from "../model/walking";
 import { BaseDatabase } from "./BaseDatabase";
-import { off } from "process";
+
 
 export class DogWalkingDatabase extends BaseDatabase {
     private static Dog_Walking = "Dog_Walking";
@@ -76,10 +76,13 @@ public allwalking = async(config:any,
   try {
    const data = new Date();
 
-   const dataatual = data.getDate()
-console.log(dataatual)
+   const dia = data.getDate()
+   const mes = data.getMonth()
+   const ano = data.getFullYear()
+
+
      const result = await this.getConnection()
-     .select("*").where({data_agendamento:walking.data_agendamento}).orderBy(config.sort, config.order)
+     .select("*").where('data_agendamento', '>=',ano-mes-dia).orderBy(config.sort, config.order)
      .limit(config.size)
      .offset(config.offset).from(DogWalkingDatabase.Dog_Walking);
      return result;

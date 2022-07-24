@@ -3,7 +3,7 @@ import { DogWalkingBusiness } from "../business/WalkingBusiness";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
 import {walkingInputDTO} from "../model/walking"
 import { InvalidTime,InvalidPet,InvalidDados } from "../error/customError";
-import { Console } from "console";
+
 
 
 
