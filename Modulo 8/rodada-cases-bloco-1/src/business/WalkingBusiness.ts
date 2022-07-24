@@ -85,16 +85,15 @@ public createWalking = async (input: walkingInputDTO) => {
    }
  }
 
-//  public getShow = async (show:show) => {
-//   try {
+ public showWalking = async (walking:walking) => {
+  try {
 
-//       return await new ShowDatabase().getShow(show);
-  
-   
-//     } catch (error:any) {
-//     throw new Error(error.message);
-//   }
-// }
+      return await new DogWalkingDatabase().showWalking(walking);
+     
+    } catch (error:any) {
+    throw new Error(error.message);
+  }
+}
 
 }
 

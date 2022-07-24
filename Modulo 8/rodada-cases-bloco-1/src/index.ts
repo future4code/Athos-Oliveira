@@ -10,6 +10,7 @@ app.use(express.json());
 
 
 app.post("/walking", walkingRouter)
+app.get("/walking/:id'", walkingRouter)
 
 
 

@@ -27,20 +27,20 @@ export class DogWalkingDatabase extends BaseDatabase {
       }
 
    }
-//    public getShow = async(
-//       walking: walking
-//    ) => {
-//       try {
-
-//          const result = await this.getConnection()
-//              .select("*").from(DogWalkingDatabase.Dog_Walking);
-
-//          return result;
-
-//       } catch (error:any) {
-//       throw new Error(error.sqlMessage || error.message);
-//      }
-//  }
+   public showWalking = async(
+      walking: walking
+  ) => {
+     try {
+  
+        const result = await this.getConnection()
+            .select("duracao").where({ id: walking.id }).from(DogWalkingDatabase.Dog_Walking);
+  
+        return result;
+  
+      } catch (error:any) {
+        throw new Error(error.sqlMessage || error.message);
+    }
+  }
 }
 
 
