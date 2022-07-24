@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 import { DogWalkingBusiness } from "../business/WalkingBusiness";
 import { DogWalkingDatabase } from "../data/WalkingDatabase";
 import {walkingInputDTO} from "../model/walking"
+import { InvalidTime,InvalidPet,InvalidDados } from "../error/customError";
+
 
 
 export class WalkingController {
@@ -12,6 +14,17 @@ export class WalkingController {
    ):Promise<void> => {
       try {
 
+
+         if (req.body.pets < 1) {
+            throw new InvalidPet();
+          }
+          if (!req.body.data_agendamento || !req.body.duracao || !req.body.latitude || !req.body.longitude
+            || !req.body.pets || !req.body.hora_inicio || !req.body.hora_termino) {
+            throw new InvalidDados();
+          }
+          if (req.body.duracao != "00:30:00" && req.body.duracao != "01:00:00") {
+            throw new InvalidTime()
+          }
       
          const { data_agendamento, 
             duracao, 
