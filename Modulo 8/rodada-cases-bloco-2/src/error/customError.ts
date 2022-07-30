@@ -20,7 +20,26 @@ export class InvalidTime extends CustomError{
       super(400, "'Somente permidodo duraçoes de 00:30:00 ou 01:00:00 '")
   }
 }
-
+export class InvalidEmail extends CustomError{ 
+  constructor(){
+      super(400, "Email ou Senha invalidos")
+  }
+}
+export class InvalidPassword extends CustomError{ 
+  constructor(){
+    super(400, "Email ou Senha invalidos")
+  }
+}
+export class UserNotFoud extends CustomError{ 
+  constructor(){
+    super(400, "Email ou Senha invalidos")
+  }
+}
+export class InvalidName extends CustomError{ 
+    constructor(){
+      super(400, "Algum dado invalido")
+    }
+  }
 export class InvalidDados extends CustomError{ 
   constructor(){
       super(400,  'Preencha os campos "data do agendamento","tempo de de duração, inicio e fim" , "quantidade de pets", "latitude e longitude" ')

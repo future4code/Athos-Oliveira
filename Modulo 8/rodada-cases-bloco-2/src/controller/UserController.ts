@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { UserInputDTO, LoginInputDTO} from "../model/User";
+import { UserInputDTO, LoginInputDTO} from "../model/user";
 import { UserBusiness } from "../business/UserBusiness";
 import { BaseDatabase } from "../data/BaseDatabase";
-import { InvalidEmail } from "../error/customError";
+import { InvalidEmail,InvalidPassword } from "../error/customError";
 
 export class UserController {
     async signup(req: Request, res: Response) {
@@ -12,17 +12,17 @@ export class UserController {
               }
           
                if (!req.body.email || req.body.email.indexOf("@") === -1) {
-                throw new Error("Invalid email");
+                throw new InvalidEmail();
               }
           
               if (!req.body.password || req.body.password.length < 6) {
-                throw new Error("Invalid password");
+                throw new InvalidPassword();
               }
             const input: UserInputDTO = {
                 email: req.body.email,
                 name: req.body.name,
                 password: req.body.password,
-                role: req.body.role
+                role:req.body.role
             }
 
             const userBusiness = new UserBusiness();
@@ -44,11 +44,11 @@ export class UserController {
               }
           
                if (!req.body.email || req.body.email.indexOf("@") === -1) {
-                throw new Error("Invalid email");
+                throw new InvalidEmail();
               }
           
               if (!req.body.password || req.body.password.length < 6) {
-                throw new Error("Invalid password");
+                throw new InvalidPassword();
               }
             const loginData: LoginInputDTO = {
                 email: req.body.email,

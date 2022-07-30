@@ -1,5 +1,5 @@
 import { BaseDatabase } from "./BaseDatabase";
-import { User } from "../model/User";
+import { User } from "../model/user";
 import { CustomError,UserNotFoud, InvalidEmail, InvalidName, InvalidPassword } from "../error/customError";
 
 export class UserDatabase extends BaseDatabase {
