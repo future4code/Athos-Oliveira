@@ -1,10 +1,9 @@
 import { BaseDatabase } from "./BaseDatabase";
 import { User } from "../model/user";
-import { CustomError,UserNotFoud, InvalidEmail, InvalidName, InvalidPassword } from "../error/customError";
 
 export class UserDatabase extends BaseDatabase {
 
-  private static LAMA_USUARIOS = "LAMA_USUARIOS";
+  private static Usuarios = "USUARIOS";
 
   public async createUser(
     id: string,
@@ -22,7 +21,7 @@ export class UserDatabase extends BaseDatabase {
           password,
           role
         })
-        .into(UserDatabase.LAMA_USUARIOS);
+        .into(UserDatabase.Usuarios);
     } catch (error:any) {
       throw new Error(error.sqlMessage || error.message);
     }
@@ -31,7 +30,7 @@ export class UserDatabase extends BaseDatabase {
   public async getUserByEmail(email: string): Promise<User> {
     const result = await this.getConnection()
       .select("*")
-      .from(UserDatabase.LAMA_USUARIOS)
+      .from(UserDatabase.Usuarios)
       .where({ email });
 
     return User.toUserModel(result[0]);

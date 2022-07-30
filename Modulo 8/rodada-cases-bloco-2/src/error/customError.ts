@@ -15,9 +15,9 @@ export class InvalidPet extends CustomError{
       super(400, "A quantidade deve ser maior que zero")
   }
 }
-export class InvalidTime extends CustomError{ 
+export class InvalidCompetiton extends CustomError{ 
   constructor(){
-      super(400, "'Somente permidodo duraçoes de 00:30:00 ou 01:00:00 '")
+      super(400, 'Escolha entre as competiçoes Validas: "Lançamento de Dardo" ou "100m rasos"')
   }
 }
 export class InvalidEmail extends CustomError{ 
@@ -40,8 +40,28 @@ export class InvalidName extends CustomError{
       super(400, "Algum dado invalido")
     }
   }
+  export class Invalidprogresso extends CustomError{ 
+    constructor(){
+      super(400, "informe 'Em Andamento' ou 'Concluido' ")
+    }
+  }
+  export class InvalidTexto extends CustomError{ 
+    constructor(){
+      super(400, "O campo de ser ser texto")
+    }
+  }
+  export class InvalidNumero extends CustomError{ 
+    constructor(){
+      super(400, "O campo de ser ser Numerico")
+    }
+  }
+  export class Invalidunidade extends CustomError{ 
+    constructor(){
+      super(400, "insira um caractere representando a unidade de medida ")
+    }
+  }
 export class InvalidDados extends CustomError{ 
   constructor(){
-      super(400,  'Preencha os campos "data do agendamento","tempo de de duração, inicio e fim" , "quantidade de pets", "latitude e longitude" ')
+      super(400,  'Preencha os campos corretamente ')
   }
 }

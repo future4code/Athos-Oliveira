@@ -2,7 +2,8 @@ import dotenv from "dotenv";
 import {AddressInfo} from "net";
 import express from "express";
 import { userRouter } from "./routes/userRouter";
-import { walkingRouter } from "./routes/WalkingRouter";
+import { competicaoRouter } from "./routes/competicaoRouter";
+import { resultadoRouter } from "./routes/ResultadoRouter";
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -11,17 +12,16 @@ app.use(express.json());
 app.post("/signup", userRouter)
 app.post("/login", userRouter)
 
-app.post("/competicao", walkingRouter)//add competicao
-app.get("/competicao/:id", walkingRouter)// busca resultados da competicao ordem de data
-app.put("/competicao/:id", walkingRouter)//atualiza o termino da competicao
-app.get("/competicao/end", walkingRouter)//ver todas competiçoes finalizadas
-app.get("/competicao/progress", walkingRouter)//ver todas competiçoes finalizadas
-app.get("/competicao", walkingRouter)//tudo
+app.post("/competicao", competicaoRouter)
+app.get("/competicao/:id", competicaoRouter)
+app.put("/competicao/:id", competicaoRouter)
+app.get("/encerradas", competicaoRouter)
+app.get("/andamento", competicaoRouter)
+app.get("/competicao", competicaoRouter)
 
-app.post("/resultado", walkingRouter)//add resultado in compettion
-app.get("/resultado/:id", walkingRouter)//busca resultado
-app.put("/resultado/:id", walkingRouter)//atualiza resultado
-app.put("/resultado", walkingRouter)//todos os competidores
+app.post("/resultado", resultadoRouter)
+app.get("/resultado", resultadoRouter)
+app.get("/ranking", resultadoRouter)
 
 
 

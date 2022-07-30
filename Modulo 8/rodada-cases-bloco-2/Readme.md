@@ -1,13 +1,17 @@
-## API Dog Hero
+## API Jogos Olímpicos
 
-#### Esta API Tem o intuito de Agendar Passeios de pets, consultar próximos passeios agendados, incluindo o horario de inicio fim, o preço é calculado automaticamente podendo receber descontos conforme a quantidade de pets.
+#### Esta API Tem a finalidade de adicionar dois tipos de competiçoes, 100m rasos: Menor tempo vence
+#### Lançamento de Dardo: Maior distância vence, alem disso o usuario podera consultar as comperiçoes em andamento e encerradas, visualizar o ranking de atletas, alem de registrar o encerrarmento de uma competição.
 ##
 ### Link da Documentação:
-#### [API  Dog Hero ](https://documenter.getpostman.com/view/15418246/UzXKXKQc)
-
+#### [API Jogos Olímpicos](https://documenter.getpostman.com/view/15418246/UzXKXKQc)
 ##
 ### O que Funciona: 
-##### Endpoints GET('/index','/show','/start walk','/finish walk' ), POST('/walking')
+##### Endpoints:
+##### GET(/competicao/:id, /encerradas, /andamento, /competicao, /resultado, /ranking),
+##### POST(/competicao, /signup, /login, /resultado)
+##### PUT(/competicao/:id)
+##
 ### O que Não Funciona:
 #### Nao consegui implementar os testes unitários 
 ##
