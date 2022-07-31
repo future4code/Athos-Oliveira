@@ -3,6 +3,7 @@ import { UserDatabase } from "../data/UserDatabase";
 import { IdGenerator } from "../services/IdGenerator";
 import { HashManager } from "../services/HashManager";
 import { Authenticator } from "../services/Authenticator";
+import {UserNotFoud} from "../error/customError";
 
 export class UserBusiness {
 
@@ -19,10 +20,10 @@ export class UserBusiness {
 
         const authenticator = new Authenticator();
         const accessToken = authenticator.generateToken({ id, role: user.role });
-
+       
         return accessToken;
     }
-
+   
     async getUserByEmail(user: LoginInputDTO) {
 
         const userDatabase = new UserDatabase();
@@ -35,7 +36,7 @@ export class UserBusiness {
         const accessToken = authenticator.generateToken({ id: userFromDB.getId(), role: userFromDB.getRole() });
 
         if (!hashCompare) {
-            throw new Error("Invalid Password!");
+            throw new UserNotFoud();
         }
 
         return accessToken;

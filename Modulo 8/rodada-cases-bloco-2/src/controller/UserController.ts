@@ -24,11 +24,13 @@ export class UserController {
                 password: req.body.password,
                 role:req.body.role
             }
-
+            
             const userBusiness = new UserBusiness();
             const token = await userBusiness.createUser(input);
-
-            res.status(200).send({ token });
+           
+            res.status(200).send({token:token });
+            res.status(200).send({ message: "Usuario Cadastrado com Sucesso!" });
+        
         } catch (error:any) {
             res.status(400).send({ error: error.message });
         }

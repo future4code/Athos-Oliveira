@@ -4,7 +4,7 @@
 #### Lançamento de Dardo: Maior distância vence, alem disso o usuario podera consultar as comperiçoes em andamento e encerradas, visualizar o ranking de atletas, alem de registrar o encerrarmento de uma competição.
 ##
 ### Link da Documentação:
-#### [API Jogos Olímpicos](https://documenter.getpostman.com/view/15418246/UzXKXKQc)
+#### [API Jogos Olímpicos](https://documenter.getpostman.com/view/15418246/UzdzTR5A)
 ##
 ### O que Funciona: 
 ##### Endpoints:

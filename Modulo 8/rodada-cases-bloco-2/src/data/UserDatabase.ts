@@ -3,7 +3,7 @@ import { User } from "../model/user";
 
 export class UserDatabase extends BaseDatabase {
 
-  private static Usuarios = "USUARIOS";
+  private static Usuarios = 'USUARIOS';
 
   public async createUser(
     id: string,
@@ -13,15 +13,16 @@ export class UserDatabase extends BaseDatabase {
     role: string
   ): Promise<void> {
     try {
+      
       await this.getConnection()
         .insert({
-          id,
-          email,
-          name,
-          password,
-          role
-        })
-        .into(UserDatabase.Usuarios);
+          id:id,
+          email:email,
+          name:name,
+          password:password,
+          role:role,
+        }).into(UserDatabase.Usuarios);
+
     } catch (error:any) {
       throw new Error(error.sqlMessage || error.message);
     }

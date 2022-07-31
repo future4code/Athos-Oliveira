@@ -16,7 +16,6 @@ export class ResultadoDatabase extends BaseDatabase {
             resultado:resultado.resultado,
             unidade:resultado.unidade,
             competicao_id:resultado.competicao_id
-       
          }).into(ResultadoDatabase.Resultado);
          
       } catch (error:any) {
