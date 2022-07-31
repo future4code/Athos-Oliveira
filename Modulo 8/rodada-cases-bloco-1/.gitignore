@@ -1,7 +1,6 @@
 node_modules
 build
-
-.env
-
-.vscode
 requests.rest
+.env
+.vscode
+
