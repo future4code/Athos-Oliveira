@@ -1,9 +1,5 @@
-{
-<<<<<<< Updated upstream
-  "name": " Estante-Virtual",
-=======
+
   "name": " EstanteVirtual",
->>>>>>> Stashed changes
   "version": "1.0.0",
   "description": "o projeto  Estante Virtual",
   "main": "index.js",
