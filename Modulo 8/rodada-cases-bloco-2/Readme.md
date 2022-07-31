@@ -1,7 +1,7 @@
 ## API Jogos Olímpicos
 
-#### Esta API Tem a finalidade de adicionar dois tipos de competiçoes, 100m rasos: Menor tempo vence
-#### Lançamento de Dardo: Maior distância vence, alem disso o usuario podera consultar as comperiçoes em andamento e encerradas, visualizar o ranking de atletas, alem de registrar o encerrarmento de uma competição.
+#### Esta API Tem a finalidade de adicionar dois tipos de competições, 100m rasos: Menor tempo vence
+#### Lançamento de Dardo: Maior distância vence, além disso o usuário poderá consultar as competições em andamento e #### encerradas, visualizar o ranking de atletas, além de registrar o encerramento de uma competição, os usuários deverão se #### autenticar para utilização da API.
 ##
 ### Link da Documentação:
 #### [API Jogos Olímpicos](https://documenter.getpostman.com/view/15418246/UzdzTR5A)
