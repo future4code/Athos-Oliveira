@@ -20,7 +20,8 @@ app.post("/resultado", resultadoRouter)
 app.get("/resultado", resultadoRouter)
 app.get("/ranking", resultadoRouter)
 
-const server = app.listen(3000, () => {
+
+const server = app.listen(process.env.PORT ||3000, () => {
     if (server) {
       const address = server.address() as AddressInfo;
       console.log(`Servidor rodando em http://localhost:${address.port}`);

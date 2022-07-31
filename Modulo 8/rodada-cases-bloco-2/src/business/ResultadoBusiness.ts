@@ -38,7 +38,7 @@ export class ResultadoBusiness {
         competicao_id
 
       });
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -48,7 +48,7 @@ export class ResultadoBusiness {
 
       return await new ResultadoDatabase().consultarResultado(resultado);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -59,7 +59,7 @@ export class ResultadoBusiness {
      
       return await new ResultadoDatabase().Ranking(resultado,config);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }

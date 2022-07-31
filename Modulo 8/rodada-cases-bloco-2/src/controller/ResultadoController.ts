@@ -53,7 +53,7 @@ export class ResultadoController {
          resultadoBusines.criarResultado(input)
    
          res.status(201).send({ message: "Resultado Adicionado com Sucesso!" })
-      } catch (error:any) {
+      } catch (error) {
          res.status(400).send(error.sqlMessage || error.message)
       }
    }
@@ -70,7 +70,7 @@ export class ResultadoController {
          const atleta = await new ResultadoDatabase().consultarResultado(consulta);
          
          res.send(atleta).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
@@ -113,10 +113,10 @@ input.offset = offset
       input.size = 10
     }
 
-         const result = await new ResultadoDatabase().Ranking(input);
+         const result = await new ResultadoDatabase().Ranking(input,input);
          
          res.send(result).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }

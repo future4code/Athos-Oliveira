@@ -18,7 +18,7 @@ export class ResultadoDatabase extends BaseDatabase {
             competicao_id:resultado.competicao_id
          }).into(ResultadoDatabase.Resultado);
          
-      } catch (error:any) {
+      } catch (error) {
          throw new Error(error.sqlMessage || error.message)
       }
    }
@@ -30,7 +30,7 @@ export class ResultadoDatabase extends BaseDatabase {
           const result = await this.getConnection().select("*").where({atleta: resultado.atleta}).from(ResultadoDatabase.Resultado);
 
           return {Atleta_Resultado:result};
-        } catch (error:any) {
+        } catch (error) {
         throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -45,7 +45,7 @@ public Ranking = async(config:any,
      .limit(config.size)
      .offset(config.offset).from(ResultadoDatabase.Resultado);
      return {Ranking:result};
-   } catch (error:any) {
+   } catch (error) {
      throw new Error(error.sqlMessage || error.message);
  }
 }

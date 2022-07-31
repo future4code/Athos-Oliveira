@@ -23,7 +23,7 @@ export class UserDatabase extends BaseDatabase {
           role:role,
         }).into(UserDatabase.Usuarios);
 
-    } catch (error:any) {
+    } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }

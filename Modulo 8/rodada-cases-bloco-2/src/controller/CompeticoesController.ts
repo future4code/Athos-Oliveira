@@ -46,7 +46,7 @@ export class CompeticoesController {
          competicaoBusines.criarCompeticao(input)
    
          res.status(201).send({ message: "Competição Adicionada com Sucesso!" })
-      } catch (error:any) {
+      } catch (error) {
          res.status(400).send(error.sqlMessage || error.message)
       }
    }
@@ -89,10 +89,10 @@ input.offset = offset
    }
 
 
-         const duracao = await new CompeticoesDatabase().consultarResultadoCompeticao(input);
+         const duracao = await new CompeticoesDatabase().consultarResultadoCompeticao(input,input);
          
          res.send(duracao).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
@@ -107,7 +107,7 @@ input.offset = offset
          const inicio = await new CompeticoesDatabase().competicaoEmAndamento(andamento)
          
          res.send(inicio).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
@@ -122,7 +122,7 @@ input.offset = offset
          const termino = await new CompeticoesDatabase().competicaoEncerrada(encerrado);
          
          res.send(termino).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
@@ -164,10 +164,10 @@ input.offset = offset
       input.size = 10
     }
 
-         const result = await new CompeticoesDatabase().todasCompeticoes(input);
+         const result = await new CompeticoesDatabase().todasCompeticoes(input,input);
          
          res.send(result).status(200);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
@@ -200,7 +200,7 @@ input.offset = offset
          const progressoUpdate = await new CompeticoesDatabase().atualizaProgresso(update);
          
          res.send({ message: "Competição Encerrada" }).status(201);
-      } catch (error:any) {
+      } catch (error) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }

@@ -37,7 +37,7 @@ export class CompeticoesBusiness {
         hora_termino
 
       });
-    } catch (error: any) {
+    } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -45,9 +45,9 @@ export class CompeticoesBusiness {
   public consultarResultadoCompeticao = async (competicao: competicao) => {
     try {
 
-      return await new CompeticoesDatabase().consultarResultadoCompeticao(competicao);
+      return await new CompeticoesDatabase().consultarResultadoCompeticao(competicao,competicao);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -56,7 +56,7 @@ export class CompeticoesBusiness {
 
       return await new CompeticoesDatabase().competicaoEmAndamento(competicao);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -65,16 +65,16 @@ export class CompeticoesBusiness {
 
       return await new CompeticoesDatabase().competicaoEncerrada(competicao);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
   public todasCompeticoes = async (competicao: competicao) => {
     try {
 
-      return await new CompeticoesDatabase().todasCompeticoes(competicao);
+      return await new CompeticoesDatabase().todasCompeticoes(competicao,competicao);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -84,7 +84,7 @@ export class CompeticoesBusiness {
  
       return await new CompeticoesDatabase().atualizaProgresso(competicao);
 
-    } catch (error: any) {
+     } catch (error) {
       throw new Error(error.sqlMessage || error.message);
     }
   }

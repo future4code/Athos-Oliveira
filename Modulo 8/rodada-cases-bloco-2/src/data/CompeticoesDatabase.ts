@@ -19,7 +19,7 @@ export class CompeticoesDatabase extends BaseDatabase {
        
          }).into(CompeticoesDatabase.Competicoes);
          
-      } catch (error:any) {
+      } catch (error) {
          throw new Error(error.sqlMessage || error.message)
       }
    }
@@ -35,7 +35,7 @@ export class CompeticoesDatabase extends BaseDatabase {
      .from(CompeticoesDatabase.Competicoes);
 
           return {Resultados:result};
-        } catch (error:any) {
+        } catch (error) {
         throw new Error(error.sqlMessage || error.message);
     }
   }
@@ -48,7 +48,7 @@ export class CompeticoesDatabase extends BaseDatabase {
      const result = await this.getConnection()
          .select("*").where({progresso: progresso}).from(CompeticoesDatabase.Competicoes);
          return {EmAndamento:result};
-   } catch (error:any) {
+   } catch (error) {
      throw new Error(error.sqlMessage || error.message);
  }
 }
@@ -61,7 +61,7 @@ public competicaoEncerrada = async(
        .select("*").where({progresso: progresso}).from(CompeticoesDatabase.Competicoes);
        return {Encerradas:result};
 
-   } catch (error:any) {
+   } catch (error) {
      throw new Error(error.sqlMessage || error.message);
  }
 }
@@ -74,7 +74,7 @@ public todasCompeticoes = async(config:any,
      .limit(config.size)
      .offset(config.offset).from(CompeticoesDatabase.Competicoes);
      return {ListaCompetiçoes:result};
-   } catch (error:any) {
+   } catch (error) {
      throw new Error(error.sqlMessage || error.message);
  }
 }
@@ -90,7 +90,7 @@ const id = competicao.id
       .update({progresso: competicao.progresso , hora_termino: competicao.hora_termino}).where( {id: competicao.id}).from(CompeticoesDatabase.Competicoes);
    
       return result;
-   } catch (error:any) {
+   } catch (error) {
      throw new Error(error.sqlMessage || error.message);
  }
 }
