@@ -1,7 +1,7 @@
-
-  "name": " EstanteVirtual",
+{
+  "name": "Estande-Virtual",
   "version": "1.0.0",
-  "description": "o projeto  Estante Virtual",
+  "description": "o projeto Jogos Olimpcos Estande Virtual",
   "main": "index.js",
   "scripts": {
     "start": "tsc && node --inspect ./build/index.js",
