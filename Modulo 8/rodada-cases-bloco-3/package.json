@@ -1,7 +1,7 @@
 {
-  "name": "Estande-Virtual",
+  "name": "Amaro-produtos",
   "version": "1.0.0",
-  "description": "o projeto Jogos Olimpcos Estande Virtual",
+  "description": "o projeto api cadastro de produtos Amaro",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts",
