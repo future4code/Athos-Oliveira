@@ -1,4 +1,4 @@
-## API Jogos Olímpicos
+## API Amaro Produtos
 
 #### Esta API Tem a finalidade de adicionar cadastrar produtos, o preço de venda sera calculado automaticamente, além disso pode ser criado categorias e vincular as Tags ao cadastro de produtos.
 ##
