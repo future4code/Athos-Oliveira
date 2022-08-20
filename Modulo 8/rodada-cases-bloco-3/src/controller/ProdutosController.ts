@@ -184,6 +184,25 @@ export class ProdutosController {
       res.send({ message: error.message }).status(error.sqlMessage || error.message);
     }
   }
+  public removeProduto = async (
+    req: Request,
+    res: Response
+ ) => {
+    try {
+ 
+       const input:any = {
+          id: req.params.id,
+      }
+           
+       const produtoBusiness = new ProdutosDatabase
+       produtoBusiness.removeProduto(input)
+ 
+       res.status(201).send({ message: "Produto Excluido!" })
+ 
+    } catch (error) {
+       res.send({ message: error.message }).status(error.status);
+   }
+ }
 }
 
 

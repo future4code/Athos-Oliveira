@@ -110,6 +110,25 @@ export class CategotiaController {
       res.send({ message: error.message }).status(error.sqlMessage || error.message);
     }
   }
+  public removeCategoria = async (
+    req: Request,
+    res: Response
+ ) => {
+    try {
+ 
+       const input:any = {
+          id: req.params.id,
+      }
+           
+       const categoriaBusiness = new CategoriaDatabase
+       categoriaBusiness.removeCategoria(input)
+ 
+       res.status(201).send({ message: "Tag Exclida!" })
+ 
+    } catch (error) {
+       res.send({ message: error.message }).status(error.status);
+   }
+ }
 }
 
 

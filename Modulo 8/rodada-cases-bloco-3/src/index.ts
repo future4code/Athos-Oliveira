@@ -10,18 +10,14 @@ app.use(express.json());
 
 app.post("/signup", userRouter)
 app.post("/login", userRouter)
-
 app.post("/tag", categoriaRouter)
-app.get("/tag", categoriaRouter)
-
-app.put("/tag/:id", categoriaRouter)
-app.delete("/tag/:id", categoriaRouter)
-
 app.post("/produto", produtoRouter)
+app.get("/tag", categoriaRouter)
 app.get("/produto", produtoRouter) 
 app.get("/produto/pesquisa", produtoRouter)
+app.put("/tag/:id", categoriaRouter)
 app.put("/produto/:id", produtoRouter)
-
+app.delete("/tag/:id", categoriaRouter)
 app.delete("/produto/:id", produtoRouter)
 
 

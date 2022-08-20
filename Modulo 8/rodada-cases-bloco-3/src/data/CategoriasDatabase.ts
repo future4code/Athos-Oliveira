@@ -53,9 +53,21 @@ public atualizaCategoria = async (
       throw new Error(error.sqlMessage || error.message);
    }
 }
+public removeCategoria = async(
+   input:categotia
+) => {
+   try {
+      
+      const result = await this.getConnection()
+          .delete().where({ id: input.id}).andWhere ({ id: input.id}).from(CategoriaDatabase.CATEGORIAS);
 
+      return result;
+
+    } catch (error) {
+      throw new Error(error.sqlMessage || error.message);
+  }
 }
-// TAG: categotia.TAG,
-// produto_id: categotia.produto_id
+}
+
 
 

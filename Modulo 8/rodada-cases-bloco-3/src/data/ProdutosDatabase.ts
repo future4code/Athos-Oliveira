@@ -88,7 +88,19 @@ export class ProdutosDatabase extends BaseDatabase {
          throw new Error(error.sqlMessage || error.message);
       }
    }
-
+   public removeProduto = async(
+      input:produto
+   ) => {
+      try {
+         
+         const result = await this.getConnection()
+             .delete().where({ id: input.id}).andWhere ({ id: input.id}).from(ProdutosDatabase.PRODUTOS);
+         return result;
+   
+       } catch (error) {
+         throw new Error(error.sqlMessage || error.message);
+     }
+   }
 }
 
 

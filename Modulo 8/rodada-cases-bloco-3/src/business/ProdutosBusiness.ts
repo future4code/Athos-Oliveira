@@ -99,4 +99,14 @@ export class ProdutosBusiness {
       throw new Error(error.sqlMessage || error.message);
     }
   }
+  public removeProduto = async (produto:produto) => {
+    try {
+        
+        return await new ProdutosDatabase().removeProduto(produto);
+    
+     
+      } catch (error) {
+      throw new Error(error.message);
+    }
+  }
 }
