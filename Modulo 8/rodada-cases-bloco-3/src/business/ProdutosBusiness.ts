@@ -90,14 +90,13 @@ export class ProdutosBusiness {
       throw new Error(error.sqlMessage || error.message);
     }
   }
-//   public atualizaProduto = async (produto: produto) => {
+  public atualizaProduto = async (produto: produto) => {
     
-//     try {
- 
-//       return await new ProdutosDatabase().atualizaProduto(produto);
+    try {
+      return await new ProdutosDatabase().atualizaProduto(produto);
 
-//      } catch (error) {
-//       throw new Error(error.sqlMessage || error.message);
-//     }
-//   }
+     } catch (error) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
 }

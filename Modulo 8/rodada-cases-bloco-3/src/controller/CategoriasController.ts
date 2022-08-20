@@ -80,7 +80,36 @@ export class CategotiaController {
       res.send({ message: error.message }).status(error.sqlMessage || error.message);
     }
   }
+  public atualizaCategoria = async (
+    req: Request,
+    res: Response
+  ) => {
+    try {
 
+      if (!req.body.TAG || !req.body.produto_id ) {
+        throw new InvalidDados();
+      }
+
+      if (typeof req.body.TAG !== 'string') {
+        throw new InvalidTAG();
+      }
+      if (typeof req.body.produto_id !== 'string') {
+        throw new InvalidID();
+      }
+  
+      const update: any = {
+        id: req.params.id,
+        produto_id: req.body,
+        TAG: req.body,
+      }
+
+      const categoriaUpdate = await new CategoriaDatabase().atualizaCategoria(update);
+
+      res.send({ message: "Categoria atualizada" }).status(201);
+    } catch (error) {
+      res.send({ message: error.message }).status(error.sqlMessage || error.message);
+    }
+  }
 }
 
 

@@ -46,5 +46,14 @@ export class CategoriaBusiness {
       throw new Error(error.sqlMessage || error.message);
     }
   }
+  public atualizaCategoria = async (categotia: categotia) => {
+    
+    try {
+      return await new CategoriaDatabase().atualizaCategoria(categotia);
+
+     } catch (error) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
 }
 

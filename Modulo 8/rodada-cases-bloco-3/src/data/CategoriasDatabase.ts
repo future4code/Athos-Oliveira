@@ -5,7 +5,8 @@ import { BaseDatabase } from "./BaseDatabase";
 
 export class CategoriaDatabase extends BaseDatabase {
     private static CATEGORIAS = "CATEGORIAS";
-   public adicionarCategoria = async(
+
+public adicionarCategoria = async(
       categotia: categotia
    ) => {
       try {
@@ -34,8 +35,27 @@ public TodasCategorias = async(config:any,
      throw new Error(error.sqlMessage || error.message);
  }
 }
+public atualizaCategoria = async (
+   categotia: categotia
+) => {
+   try {
+   
+      const TAG:any = categotia.TAG
+    
+      const result:any = await this.getConnection()
+         .update({
+            TAG: TAG.TAG,
+             produto_id: categotia.produto_id
+         }).where({ id: categotia.id }).from(CategoriaDatabase.CATEGORIAS);
 
+      return result;
+   } catch (error) {
+      throw new Error(error.sqlMessage || error.message);
+   }
 }
 
+}
+// TAG: categotia.TAG,
+// produto_id: categotia.produto_id
 
 
