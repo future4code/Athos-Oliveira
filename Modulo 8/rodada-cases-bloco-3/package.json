@@ -1,0 +1,43 @@
+{
+  "name": "Amaro-produtos",
+  "version": "1.0.0",
+  "description": "o projeto api cadastro de produtos Amaro",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "ts-node-dev ./src/index.ts",
+    "test": "ts-node-dev src/index.ts"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Athos",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^25.2.3",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^18.0.1",
+    "@types/uuid": "^8.3.4",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
+    "heroku": "^7.60.2",
+    "jest": "^26.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.21",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.19",
+    "process": "^0.11.10",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "3.9.10",
+    "uuid": "^8.3.2"
+  }
+}
